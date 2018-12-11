@@ -1,8 +1,5 @@
-body {
-	min-width: 320px;
-}
 .topbar {
-	background: $topbar;
+	background: $top-bar-color;
 	color: white;
 	font-size: 1.222222222rem;
 	line-height: 3.555555556rem;
@@ -17,19 +14,27 @@ body {
 	}
 	@include e(getStarted) {
 		a {
-			background-color: darken($topbar, 15%);
+			background-color: darken($top-bar-color, 15%);
 			font-weight: bold;
 			i {
 				padding-left: 26px;
 				font-size: 1.5rem;
+				top: 3px;
+				position: relative;
 			}
 		}
 	}
 }
+
+.navbar-toggler {
+	color: $white;
+	font-weight: 700;
+}
+
 .indexhero {
-	background-color: #f6f7f8;
+	background-color: $gray-brand;
 	@include media-breakpoint-up(lg) {
-		background: #f6f7f8 url(../images/index-hero.jpg) no-repeat center right;
+		background: $gray-brand url(../images/index-hero.jpg) no-repeat center right;
 		background-position-x: 25%;
 	}
 	@include random-min(99.375) {
@@ -48,20 +53,13 @@ body {
 }
 #pagesHeaderLogo {
 	@include media-breakpoint-down(md) {
-		background-color: #f6f7f8;
+		background-color: $gray-brand;
 	}
 }
-.navbar-toggler {
-	font-family: $ff-2;
-	font-weight: 700;
-}
+
 .mainMenu {
-	background-color: #f7f6f6;
-}
-.home .mainMenu {
-	background-color: #fff;
-}
-.mainMenu {
+	background-color: $gray-brand;
+
 	.container {
 		@include media-breakpoint-down(xs) {
 			max-width: none;
@@ -69,85 +67,41 @@ body {
 		}
 	}
 }
-.menu-item {
-	@include media-breakpoint-up(lg) {
-		margin: 0 10px;
+
+.navbar-nav {
+
+	.menu-item {
+		@extend .flex-fill;
+		text-align: center;
 	}
-	@include media-breakpoint-up(xl) {
-		margin: 0 20px;
-	}
-}
-.navbar-nav .nav-link {
-	font-size: 1.111111111rem;
-	line-height: 3rem;
-	font-family: $ff-2;
-	@include media-breakpoint-down(md) {
-		padding-left: 3rem;
-	}
-	@include media-breakpoint-up(lg) {
-		line-height: 3.75rem;
-		margin-bottom: -10px;
-	}
-}
-.active {
-	@include media-breakpoint-up(lg) {
-		border-bottom: 10px solid $sh-red;
-	}
-	.nav-link {
+
+	.menu-item.active a,
+	.current-menu-ancestor.active a {
+		@include media-breakpoint-up(lg) {
+			border-bottom-color: $primary;
+		}
 		@include media-breakpoint-down(md) {
-			background-color: $sh-red;
+			background-color: $primary;
 			color: white;
 		}
 	}
-}
-.dropdown-toggle::after {
-	display:none;
-}
-.dropdown-menu {
-	@include media-breakpoint-down(lg) {
-		padding-top: 0;
-		padding-bottom: 0;
-		border-radius: 0;
-	}
-	@include media-breakpoint-up(lg) {
-		padding: 0;
-		li {
-			margin: 0;
-		}
-		.nav-link {
-			padding-left: 1rem !important;
-			padding-right: 1rem !important;
-			line-height: 3rem;
-			margin-bottom: -4px;
-		}
-	}
-}
-.current-menu-ancestor {
-	@include media-breakpoint-up(lg) {
-		border-bottom: 10px solid $sh-red;
-	}
-	@include media-breakpoint-down(md) {
-		background-color: $topbar;
-		color: white;
-		a {
-			color: inherit;
-		}
-	}
-}
-.current-menu-ancestor .active {
-	@include media-breakpoint-up(lg) {
-		border-bottom: none;
-	}
-	@include media-breakpoint-down(md) {
-		.nav-link {
 
-		background-color: $sitered;
-		color: white;
+	.nav-link {
+		font-size: 1.111111111rem;
+		color: $body-color;
+		border-bottom: $border-thickness solid #f7f6f6;
+		padding: 1.75rem 1.25rem 1.25rem 1.25rem;
+
+		&:hover {
+			border-bottom-color: $primary;
 		}
 	}
 }
-.current-menu-ancestor .menu-item {
-	@include media-breakpoint-up(lg) {
-		border-bottom: 1px solid #d2d1d1;
+
+.home .mainMenu {
+	background-color: #fff;
+
+	.nav-link {
+		border-bottom-color: $white;
 	}
 }

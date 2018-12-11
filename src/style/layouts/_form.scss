@@ -73,7 +73,12 @@
 
     .gform_button {
         @extend .btn;
-        @extend .btn-success;
+        @extend .btn-primary;
+        @extend .btn-lg;
+    }
+
+    .gfield_select {
+        @extend .custom-select;
     }
 
     .gform_footer {

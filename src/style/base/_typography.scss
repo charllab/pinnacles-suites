@@ -26,17 +26,10 @@ body {
     line-height: 1.5;
 }
 
-.text-primary-copy {
-    color: lighten($primary, 10%);
-
-    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-        color: $primary;
-    }
-}
-
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
-    line-height: 1.2;
+    line-height: 1.3;
+    font-weight: 700;
 
     @include media-breakpoint-down(lg) {
         br {
@@ -48,16 +41,12 @@ body {
 .lc-heading {
     text-transform: none;
 }
-h1,
-h2,
-h3 {
-    font-family: $ff-2;
-}
+
 .h1, h1 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
 
     @include media-breakpoint-down(md) {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 
@@ -65,19 +54,21 @@ h3 {
     font-size: 2rem;
 
     @include media-breakpoint-down(md) {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 }
 
 .h3, h3 {
     @include media-breakpoint-down(md) {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
     }
 }
 
 .h4, h4 {
+    font-weight: 500;
+
     @include media-breakpoint-down(md) {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -124,24 +115,20 @@ strong {
 }
 
 .lead {
-    font-size: 1.25rem;
-
-    @include media-breakpoint-down(md) {
-        font-size: 100%;
-    }
+    font-size: 1.45rem;
+    font-family: $font-family-serif;
 }
 
 .text-md {
     font-size: 90%;
 }
 
-.list-unstyled li {
-    border-bottom: 1px solid $primary;
-    padding-bottom: .5rem;
+.text-muted-white {
+    color: rgba($white, .5);
 }
 
-.list-unstyled li + li {
-    margin-top: .5rem;
+.list-unstyled li {
+    padding-bottom: .5rem;
 }
 
 .styled-list {

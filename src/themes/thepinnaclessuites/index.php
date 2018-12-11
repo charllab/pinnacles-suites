@@ -8,7 +8,7 @@ get_header();
 
 		<div class="row">
 
-			<main class="site-main" id="main">
+			<main class="site-main section" id="main">
 
 				<?php if ( have_posts() ) : ?>
 

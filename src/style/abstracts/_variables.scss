@@ -9,18 +9,19 @@ $spacer: 1rem;
 $enable-print-styles: false;
 
 // Colors
-$primary: #333;
+$primary: #9c172e;
 $secondary: #959595;
 $primary-light: #959595;
 $mark-bg: #ffd61e;
 $selection-color: #d9edf7;
-$body-color: $primary;
-$headings-color: $primary;
+$body-color: #333333;
 $input-focus-border-color: $primary;
-$topbar: #938671;
-$sitered: #9c172e;
-$sitegrey: #565453;
+$top-bar-color: #938671;
+$gray-brand: #f7f6f6;
+
 // Misc
+
+$border-thickness: .5rem;
 
 // Social colors
 $facebook-color: hsla(222, 47%, 40%, 1); // #365397

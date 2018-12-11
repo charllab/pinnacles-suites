@@ -11,3 +11,51 @@
     background: $left;
     background: linear-gradient(to right, $left $leftPos, $right $rightPos);
 }
+
+// BEM selectors ===================
+
+@mixin e($name) {
+    @at-root &__#{$name} {
+        @content
+    }
+}
+@mixin m($name) {
+    @at-root &--#{$name} {
+        @content
+    }
+}
+
+// Media Queries ===================
+
+$tablet-width: 48em;
+$desktop-width: 73.143em;
+
+@mixin random-max($wmax) {
+    @media (max-width: #{$wmax}em) {
+        @content;
+    }
+}
+
+@mixin random-min($wmin) {
+    @media (min-width: #{$wmin}em) {
+        @content;
+    }
+}
+
+@mixin random-from-to($wfrom,$wto) {
+    @media (min-width: #{$wfrom}em) and (max-width: #{$wto}em) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width + 0.071em}) {
+        @content;
+    }
+}

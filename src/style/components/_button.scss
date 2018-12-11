@@ -1,3 +1,10 @@
 button, .btn {
     cursor: pointer;
+    font-family: $font-family-serif;
+    font-weight: 700;
+    border-radius: 0;
+
+    &:focus {
+        outline: none;
+    }
 }

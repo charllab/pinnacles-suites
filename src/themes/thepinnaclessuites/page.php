@@ -13,7 +13,7 @@
 get_header();
 ?>
 
-<div class="wrapper" id="page-wrapper">
+<div class="wrapper section section--page" id="page-wrapper">
 
     <div class="container" id="content" tabindex="-1">
 

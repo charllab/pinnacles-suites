@@ -62,3 +62,54 @@ function custom_after_setup_theme()
         'primary' => 'Primary Menu'
     ]);
 }
+
+// Add TinyMCE style formats.
+add_filter('mce_buttons_2', 'custom_tiny_mce_style_formats');
+
+function custom_tiny_mce_style_formats($styles)
+{
+    array_unshift($styles, 'styleselect');
+    return $styles;
+}
+
+add_filter('tiny_mce_before_init', 'custom_tiny_mce_before_init');
+
+function custom_tiny_mce_before_init($settings)
+{
+    $style_formats = [
+        [
+            'title' => 'Lead Paragraph',
+            'selector' => 'p',
+            'classes' => 'lead',
+            'wrapper' => true
+        ],
+        [
+            'title' => 'Small',
+            'inline' => 'small'
+        ],
+        [
+            'title' => 'Blockquote',
+            'block' => 'blockquote',
+            'classes' => 'blockquote',
+            'wrapper' => true
+        ],
+        [
+            'title' => 'Blockquote Footer',
+            'block' => 'footer',
+            'classes' => 'blockquote-footer',
+            'wrapper' => true
+        ],
+        [
+            'title' => 'Cite',
+            'inline' => 'cite'
+        ]
+    ];
+
+    if (isset($settings['style_formats'])) {
+        $orig_style_formats = json_decode($settings['style_formats'], true);
+        $style_formats = array_merge($orig_style_formats, $style_formats);
+    }
+
+    $settings['style_formats'] = json_encode($style_formats);
+    return $settings;
+}
