@@ -1,0 +1,79 @@
+.contactDetails {
+	padding: 3.555555556rem 0;
+	h2 {
+		font-family: $ff-2;
+		font-size: 1.333333333rem;
+		margin-bottom: 0;
+		@include media-breakpoint-down(md) {
+			margin-top: 1rem;
+		}
+	}
+	hr {
+		width: 36px;
+		margin:.333333333rem 0 1rem;
+		background-color: #e1e1e1;
+		height: 2px;
+		border: 0;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 0;
+	}
+}
+#secondary-logo-svg {
+	width: 100%;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 1rem;
+	}
+}
+
+.subscribeCTA {
+	background: #a4364d url('../images/footer-red-bg.jpg') no-repeat bottom center;
+	background-size: cover;
+	color: rgba(white, .75);
+	padding: 2.777777778rem 0 ;
+	h2 {
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
+	h3 {
+		font-size: 1.222222222rem;
+		font-weight: 700;
+	}
+	p {
+		font-size: 1.111111111rem;
+	}
+	.subscribeDisclaimer {
+		font-size: .888888889rem;
+	}
+}
+.footerForm {
+	.form-check {
+		margin-bottom: 6px;
+	}
+	.form-check-label {
+		line-height: 1.6rem;
+	}
+	.form-check-input {
+		position: absolute !important;
+	}
+	@include e(emailInput) {
+		margin-top: 1.7rem;
+		input {
+			border-radius: 0;
+		}
+	}
+}
+.btmFooterBar {
+	padding: 2.333333333rem 0;
+	color: #7d7d7d;
+	font-size: .777777778rem;
+	text-align: center;
+	a {
+		color: inherit;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,34 @@
+jQuery(function () {
+
+    // Scrolling anchors
+    jQuery('.scrollable-anchor').on('click', function (e) {
+        e.preventDefault();
+
+        jQuery('html,body').animate({
+            scrollTop: jQuery(this.hash).offset().top
+        }, 1000);
+    });
+});
+
+var trackEvent = function (name, options) {
+    trackGA(name, options);
+    trackPixel(name, options);
+};
+
+var trackGA = function (name, options) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', name, {
+            'event_category': options.category,
+            'event_label': options.label
+        });
+    }
+};
+
+var trackPixel = function (name, options) {
+    if (typeof gtag !== 'undefined') {
+        fbq('track', 'Lead', {
+            'event_category': options.category,
+            'event_action': name
+        });
+    }
+};

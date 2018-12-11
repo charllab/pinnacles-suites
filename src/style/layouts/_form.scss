@@ -1,0 +1,86 @@
+.gravity-forms-disabled-styles {
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            @extend .form-group;
+        }
+    }
+
+    .gfield_required {
+        color: $red;
+        margin-left: .2rem;
+    }
+
+    .gform_validation_container {
+        display: none;
+    }
+
+    .gform_footer {
+        margin: 1.5rem 0 2.5rem 0;
+    }
+
+    .textarea.small {
+        height: 100px;
+    }
+
+    label {
+       font-size: 90%;
+    }
+
+    .gform_ajax_spinner {
+        position: absolute;
+        margin-left: 1rem;
+    }
+
+    .validation_error {
+        @extend .alert;
+        @extend .alert-danger;
+    }
+
+    .gfield_error {
+        .validation_message {
+            color: $red;
+            font-size: 90%;
+            margin-top: .25rem;
+        }
+    }
+}
+
+.gform_confirmation_wrapper {
+    margin: 2rem 0;
+    @extend .alert;
+    @extend .alert-success;
+}
+
+#gform_wrapper_1 {
+    margin-top: 2rem;
+    @extend .gravity-forms-disabled-styles;
+
+    label {
+        font-weight: normal;
+    }
+
+    .ginput_container {
+        margin: 0;
+    }
+
+    .ginput_container input,
+    .ginput_container textarea {
+        @extend .form-control;
+    }
+
+    .gform_button {
+        @extend .btn;
+        @extend .btn-success;
+    }
+
+    .gform_footer {
+        @extend .text-center;
+    }
+
+    .gform_ajax_spinner {
+        position: absolute;
+    }
+}
