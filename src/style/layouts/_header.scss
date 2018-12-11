@@ -1,29 +1,27 @@
 .topbar {
 	background: $top-bar-color;
 	color: white;
-	font-size: 1.222222222rem;
-	line-height: 3.555555556rem;
-	@include e(getStarted) {
-		@include media-breakpoint-up(sm) {
-			display: block;
-		}
-	}
+    padding: 1rem 0;
+    border-top: 4px solid darken($top-bar-color,7.5%);
+
 	a {
 		color: white;
-		display: inline-block;
+        font-weight: 700;
+        text-decoration: underline;
 	}
-	@include e(getStarted) {
-		a {
-			background-color: darken($top-bar-color, 15%);
-			font-weight: 700;
-			i {
-				padding-left: 26px;
-				font-size: 1.5rem;
-				top: 3px;
-				position: relative;
-			}
-		}
-	}
+
+    @include e(telcta) {
+
+        a {
+            font-size: 1.333333333rem;
+            font-weight: 700;
+            text-decoration: none;
+
+            i {
+                color: rgba(white, .24);
+            }
+        }
+    }
 }
 
 .navbar-toggler {

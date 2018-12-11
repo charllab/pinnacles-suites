@@ -14,13 +14,23 @@
 	}
 }
 
-
-
-
 .btn-success, #gform_wrapper_1 .gform_button {
 	background-color: $primary;
 	border-color: $primary;
 }
 #gform_wrapper_1 .gform_footer {
 	text-align: left !important;
+}
+
+.card {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0px 6px 70px -15px rgba(0,0,0,0.45);
+    img {
+        border-bottom: 8px solid $site-yellow;
+    }
+}
+
+.card-body {
+    padding: 1.8rem 2.25rem;
 }

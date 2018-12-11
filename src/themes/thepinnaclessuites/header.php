@@ -34,88 +34,102 @@
 
 <body <?php body_class(); ?>>
 
+<!--    <section class="topbar">-->
+<!--        <div class="container">-->
+<!--            <div id="topbarContent" class="d-flex justify-content-sm-end">-->
+<!--                <div class="mr-auto topbar__phoneNumber">-->
+<!--                    <a href="tel:2503092565"><i class="fas fa-phone"></i> (250) 309-2565</a></div>-->
+<!--                <div class="d-none d-lg-block mr-4 topbar__fluff">Helping you make smart investments</div>-->
+<!--                <div class="d-none d-lg-block topbar__getStarted">-->
+<!--                    <a href="--><?php //bloginfo('url'); ?><!--/contact" class="px-4 topbar__GetStarted">Get Started <i class="fas fa-arrow-circle-right"></i></a>-->
+<!--                </div>-->
+<!--                <div class="d-lg-none">-->
+<!--                    <button class="navbar-toggler white" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                        Menu-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
     <section class="topbar">
         <div class="container">
-            <div id="topbarContent" class="d-flex justify-content-sm-end">
-                <div class="mr-auto topbar__phoneNumber">
-                    <a href="tel:2503092565"><i class="fas fa-phone"></i> (250) 309-2565</a></div>
-                <div class="d-none d-lg-block mr-4 topbar__fluff">Helping you make smart investments</div>
-                <div class="d-none d-lg-block topbar__getStarted">
-                    <a href="<?php bloginfo('url'); ?>/contact" class="px-4 topbar__GetStarted">Get Started <i class="fas fa-arrow-circle-right"></i></a>
+            <div class="row">
+                <div class="col-md-6 mr-auto">
+                    <p class="mb-0">The Pinnacles is available for individual ownership:<br>
+                        <a href="#" target="_blank">Summer 2018 Sale Pricing →</a></p>
                 </div>
-                <div class="d-lg-none">
-                    <button class="navbar-toggler white" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">
-                        Menu
-                    </button>
+                <div class="col-md-6 d-flex align-self-center justify-content-end topbar__telcta">
+                    <a href="tel:2503092565"><i class="fas fa-phone"></i> 1-250-542-4548</a></div>
                 </div>
-            </div><!-- /row -->
-        </div><!-- /container -->
-    </section><!-- /topbar -->
+            </div>
+        </div>
+    </section>
 
 
     <?php if (is_front_page()) : ?>
 
-       <section class="indexhero">
-            <div class="container">
-	            <div class="py-md-5 logo">
-	                <h1 class="logo m-auto mb-0">
-	                    <a rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url" class="mb-0">
-	                        <?php get_template_part('includes/svg', 'logo-lg'); ?>
-	                            <span class="sr-only"><?php bloginfo('name'); ?></span>
-                        </a>
-                    </h1>
-                </div>
-            </div>
-        </section>
-
-        <section class="mainMenu">
-            <div class="container">
-                <div id="menuItems">
-                    <nav class="navbar navbar-expand-lg p-0">
-                        <?php wp_nav_menu([
-                            'theme_location' => 'primary',
-                            'container_class' => 'collapse navbar-collapse',
-                            'container_id' => 'navbar-container',
-                            'menu_class' => 'navbar-nav d-flex w-100',
-                            'fallback_cb' => '',
-                            'menu_id' => 'main-menu',
-                            'walker' => new understrap_WP_Bootstrap_Navwalker(),
-                        ]); ?>
-                    </nav>
-                </div>
-            </div>
-        </section>
+<!--       <section class="indexhero">-->
+<!--            <div class="container">-->
+<!--	            <div class="py-md-5 logo">-->
+<!--	                <h1 class="logo m-auto mb-0">-->
+<!--	                    <a rel="home" href="--><?php //echo esc_url(home_url('/')); ?><!--" title="--><?php //echo esc_attr(get_bloginfo('name', 'display')); ?><!--" itemprop="url" class="mb-0">-->
+<!--	                        --><?php //get_template_part('includes/svg', 'logo-lg'); ?>
+<!--	                            <span class="sr-only">--><?php //bloginfo('name'); ?><!--</span>-->
+<!--                        </a>-->
+<!--                    </h1>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+<!---->
+<!--        <section class="mainMenu">-->
+<!--            <div class="container">-->
+<!--                <div id="menuItems">-->
+<!--                    <nav class="navbar navbar-expand-lg p-0">-->
+<!--                        --><?php //wp_nav_menu([
+//                            'theme_location' => 'primary',
+//                            'container_class' => 'collapse navbar-collapse',
+//                            'container_id' => 'navbar-container',
+//                            'menu_class' => 'navbar-nav d-flex w-100',
+//                            'fallback_cb' => '',
+//                            'menu_id' => 'main-menu',
+//                            'walker' => new understrap_WP_Bootstrap_Navwalker(),
+//                        ]); ?>
+<!--                    </nav>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
 
         <?php else : ?>
 
-            <div id="pagesHeaderLogo">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <a rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url" class="mb-0">
-	                            <?php get_template_part('includes/svg', 'logo-sm'); ?>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- #pagesHeaderLogo -->
-
-            <section class="mainMenu">
-                <div class="container">
-                    <div id="menuItems">
-                        <nav class="navbar navbar-expand-lg p-0">
-                            <?php wp_nav_menu([
-                                'theme_location' => 'primary',
-                                'container_class' => 'collapse navbar-collapse',
-                                'container_id' => 'navbar-container',
-                                'menu_class' => 'navbar-nav d-flex w-100',
-                                'fallback_cb' => '',
-                                'menu_id' => 'main-menu',
-                                'walker' => new understrap_WP_Bootstrap_Navwalker(),
-                            ]); ?>
-                        </nav>
-                    </div>
-                </div>
-            </section>
+<!--            <div id="pagesHeaderLogo">-->
+<!--                <div class="container">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-12">-->
+<!--                            <a rel="home" href="--><?php //echo esc_url(home_url('/')); ?><!--" title="--><?php //echo esc_attr(get_bloginfo('name', 'display')); ?><!--" itemprop="url" class="mb-0">-->
+<!--	                            --><?php //get_template_part('includes/svg', 'logo-sm'); ?>
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <section class="mainMenu">-->
+<!--                <div class="container">-->
+<!--                    <div id="menuItems">-->
+<!--                        <nav class="navbar navbar-expand-lg p-0">-->
+<!--                            --><?php //wp_nav_menu([
+//                                'theme_location' => 'primary',
+//                                'container_class' => 'collapse navbar-collapse',
+//                                'container_id' => 'navbar-container',
+//                                'menu_class' => 'navbar-nav d-flex w-100',
+//                                'fallback_cb' => '',
+//                                'menu_id' => 'main-menu',
+//                                'walker' => new understrap_WP_Bootstrap_Navwalker(),
+//                            ]); ?>
+<!--                        </nav>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </section>-->
 
         <?php endif; ?>
