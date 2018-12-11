@@ -15,7 +15,7 @@
 	@include e(getStarted) {
 		a {
 			background-color: darken($top-bar-color, 15%);
-			font-weight: bold;
+			font-weight: 700;
 			i {
 				padding-left: 26px;
 				font-size: 1.5rem;
