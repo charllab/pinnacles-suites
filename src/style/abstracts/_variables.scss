@@ -9,14 +9,15 @@ $spacer: 1rem;
 $enable-print-styles: false;
 
 // Colors
-$primary: #9c172e;
-$secondary: #959595;
+$primary: #205B94;
+$secondary: #E3931D;
 $primary-light: #959595;
 $mark-bg: #ffd61e;
 $selection-color: #d9edf7;
-$body-color: #333333;
+$headers: #404040;
+$body-color: #848484;
 $input-focus-border-color: $primary;
-$top-bar-color: #938671;
+$top-bar-color: #3d455a;
 $gray-brand: #f7f6f6;
 
 // Misc
@@ -40,10 +41,7 @@ $font-family-serif: 'Merriweather', 'Campton', Georgia, "Times New Roman", Times
 $font-family-base: $font-family-sans-serif;
 $headings-font-family: $font-family-serif;
 
-$font-size-h1: 2.25rem;
 $headings-margin-bottom: $spacer;
-
-$lead-font-size: 1.15rem;
 
 // Figure
 $figure-margin: $spacer * 2.5;

@@ -14,76 +14,8 @@
 	}
 }
 
-.entry-content {
 
-	ul li + li {
-		margin-top: .75rem;
-	}
-}
 
-.howAndWho {
-	background-color: #e4e4e4;
-
-	@include media-breakpoint-up(lg) {
-		background: #e4e4e4 url(../images/watermark.svg) no-repeat center;
-		background-size: 808px 808px;
-		background-position-x: 152%;
-	}
-	@include media-breakpoint-up(xl) {
-		background-position-x: 102%;
-	}
-
-	@include e(forWho) {
-		position: relative;
-		h2 {
-			text-transform: uppercase;
-			font-size: 1rem;
-			font-weight: 700;
-			color: $primary-light;
-			margin-bottom: .3rem;
-		}
-		img {
-			border-top: 2px solid #d4d4d4;
-			padding-top: .7rem;
-		}
-	}
-	@include e(infoBlock) {
-		width: 250px;
-		background-color: #fff;
-		position: absolute;
-		bottom: 1rem;
-		padding: 1.25rem 1.75rem;
-		border-bottom: 10px solid #9b172f;
-		box-shadow: 0px 0px 45px -10px rgba(0,0,0,0.55);
-		left: -2rem;
-		p {
-			font-size: 1.222rem;
-			line-height: 1.5rem;
-		}
-		a {
-			text-transform: uppercase;
-			font-weight: 700;
-			i {
-				padding-left: .5rem;
-			}
-		}
-	}
-
-    @include media-breakpoint-down(md) {
-        .callout {
-            margin-top: 2rem;
-        }
-    }
-}
-
-.meetDon {
-	background: #555555;
-	color: rgba($white, .75);
-
-	.meetDon--content {
-		padding: 3rem 0;
-	}
-}
 
 .btn-success, #gform_wrapper_1 .gform_button {
 	background-color: $primary;
@@ -91,33 +23,4 @@
 }
 #gform_wrapper_1 .gform_footer {
 	text-align: left !important;
-}
-.clientTestimonial {
-	background-color: #f7f6f6;
-	border-left: none;
-	padding: 2rem 2rem 1rem;
-	margin: 0 0 2.5rem 0;
-	p {
-		font-size: .95rem;
-		font-family: $headings-font-family;
-		line-height: 2.15rem;
-	}
-	cite {
-		font-size: .78rem;
-		font-weight: 700;
-		font-family: $font-family-base;
-		text-transform: uppercase;
-		text-align: right;
-		display: block;
-		@include media-breakpoint-down(lg) {
-			margin-top: 2rem;
-		}
-	}
-}
-
-#sidebar {
-
-	.callout + .callout {
-		margin-top: 2rem;
-	}
 }
