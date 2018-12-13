@@ -35,7 +35,7 @@ get_header(); ?>
                       <div class="card-body">
                           <h4 class="card-title">Current Specials</h4>
                           <p class="card-text">Experience the wonders of Silver Star with one of our seasonal promotions.</p>
-                          <a href="#" class="btn btn-primary">View Specials</a>
+                          <a href="#" class="btn btn-secondary">View Specials</a>
                       </div>
                   </div>
                   </di

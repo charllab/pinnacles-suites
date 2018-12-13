@@ -27,7 +27,7 @@ button, .btn {
 
 @each $color, $value in $theme-colors {
     .btn-#{$color} {
-        background: linear-gradient(to right, darken($value, 10%) 0%, $value 35%);
+        background: linear-gradient(to right, darken($value, 5%) 0%, $value 35%);
     }
 }
 
