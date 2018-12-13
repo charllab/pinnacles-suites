@@ -1,46 +1,23 @@
-.contactDetails {
-	border-top: 4px solid $gray-brand;
 
-	a {
-		color: $body-color;
-	}
+footer {
+    background: #6c6b6b;
+    h4 {
+        color: #EFEFEF;
+    }
 
-	hr {
-		width: 3rem;
-		margin:.333333333rem 0 1rem;
-		background-color: #e1e1e1;
-		height: 2px;
-		border: 0;
-	}
-}
-
-.home .contactDetails {
-	border-top: none;
-}
-
-#secondary-logo-svg {
-	width: 100%;
-	@include media-breakpoint-down(md) {
-		margin-bottom: 1rem;
-	}
-}
-
-.subscribeCTA {
-	background: #a4364d url('../images/footer-red-bg.jpg') no-repeat bottom center;
-	background-size: cover;
-	color: rgba(white, .75);
-}
-
-.btmFooterBar {
-	color: #7d7d7d;
-	font-size: .777777778rem;
-	text-align: center;
-	a {
-		color: inherit;
-	}
-	p {
-		margin-bottom: 0;
-	}
+    p,
+    a
+    {
+        font-size: .888888889rem;
+        color: rgba(#EFEFEF, .75);
+    }
+    .footer-bar {
+        background-color: rgba(#363635,.98);
+        color: #848484;
+        a {
+            color: inherit;
+        }
+    }
 }
 
 #mc-embedded-subscribe-form {

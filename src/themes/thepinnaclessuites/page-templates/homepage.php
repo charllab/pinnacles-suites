@@ -14,7 +14,7 @@ get_header(); ?>
           <div class="row justify-content-center">
               <div class="col-md-7 text-center">
                   <a href="#" class="btn btn-secondary">Watch Video</a>
-                  <h1>Cozy Accommodations and Warm Hospitality</h1>
+                  <h1>Cozy Accommodations and Warm&nbsp;Hospitality</h1>
                   <p class="lead">Watch our video to see what it’s like to experience all the comforts of home in our vacation suites and townhouses.</p>
               </div>
           </div>
