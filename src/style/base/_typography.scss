@@ -44,14 +44,23 @@ body {
 
 .h1, h1 {
     font-size: 2.34rem;//42
+    @include media-breakpoint-down(sm) {
+        font-size: 1.647058824rem;//28
+    }
 }
 
 .h2, h2 {
     font-size: 1.9rem;//34
+    @include media-breakpoint-down(sm) {
+        font-size: 1.411764706rem;//24
+    }
 }
 
 .h3, h3 {
     font-size: 1.45rem;//26
+    @include media-breakpoint-down(sm) {
+        font-size: 1.176470588rem;//20
+    }
 }
 
 .h4, h4 {

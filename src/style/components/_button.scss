@@ -4,35 +4,51 @@ button, .btn {
     font-weight: 700;
     border-radius: 1.333333333rem;
     padding-left: 1.5rem;
+    padding-right: 1.5rem;
     line-height: 1.35rem;
     color: white;
-
-    &::after {
-        font-family: 'Font Awesome 5 Free';
-        content: '\f0a9';
-        font-size: 1.4rem;
-        font-weight: normal;
-        font-style: normal;
-        margin:0px 0px 0px 1.5rem;
-        text-decoration:none;
-        vertical-align: middle;
-    }
 
     &:focus {
         outline: none;
     }
+
 }
 
 
 
 @each $color, $value in $theme-colors {
-    .btn-#{$color} {
+
+    .btn-#{$color}-arr {
+
+        color: white;
         background: linear-gradient(to right, darken($value, 5%) 0%, $value 35%);
-    }
-}
 
-@each $color, $value in $theme-colors {
+        &::after {
+            font-family: 'Font Awesome 5 Free';
+            content: '\f0a9';
+            font-size: 1.4rem;
+            font-weight: normal;
+            font-style: normal;
+            margin:0px 0px 0px 1.5rem;
+            text-decoration:none;
+            vertical-align: middle;
+        }
+
+    }
+
+    .btn-#{$color}-grd {
+        background: linear-gradient(to right, darken($value, 5%) 0%, $value 35%);
+        color: white;
+    }
+
     .btn-#{$color}-cta {
+        color: white;
         background-color: $value;
     }
+
+    .btn-outline-#{$color} {
+        color: $value;
+        border-width: 2px;
+    }
+
 }
