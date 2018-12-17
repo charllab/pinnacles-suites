@@ -1,3 +1,36 @@
+
+#page {
+    position: relative;
+}
+.menu-column {
+
+    @include media-breakpoint-up(xl) {
+        width: 22%;
+        background-color: white;
+        box-shadow: 17px 0px 84px -5px rgba(0,0,0,0.1);
+        position: relative;
+    }
+
+}
+
+
+.content-column {
+    @include media-breakpoint-up(xl) {
+        width: 78%;
+    }
+}
+
+.menu-column-inner {
+
+    @include media-breakpoint-up(xl) {
+        position: fixed;
+        height: 100%;
+        width: 22%;
+        background: white url('../images/menu-bg@2x.jpg') no-repeat 0 0;
+        background-attachment: fixed;
+    }
+}
+
 .section {
     padding: 2.5rem 0;
 
@@ -12,6 +45,31 @@
 	@include media-breakpoint-down(md) {
 		padding: 2rem 0;
 	}
+}
+
+
+.home-intro-cta {
+    background: teal;
+    padding-top: 4rem;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 14rem;
+        padding-bottom: 14rem;
+    }
+    @include media-breakpoint-up(xxl) {
+        padding-bottom: 20rem;
+    }
+    p.lead {
+        margin-bottom: 3.5rem;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 7rem;
+        }
+    }
+}
+
+.home-intro-cards {
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+    }
 }
 
 .btn-success, #gform_wrapper_1 .gform_button {
@@ -52,6 +110,9 @@
     }
 }
 .instagram-gallery {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 15px 15px;
@@ -59,13 +120,10 @@
         grid-template-columns: repeat(2, 1fr);
     }
     @include media-breakpoint-up(sm) {
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 30px 30px;
-    }
-    @include media-breakpoint-up(lg) {
         grid-template-columns: repeat(4, 1fr);
     }
     @include media-breakpoint-up(xl) {
+        grid-gap: 30px 30px;
         grid-template-columns: repeat(6, 1fr);
     }
 }

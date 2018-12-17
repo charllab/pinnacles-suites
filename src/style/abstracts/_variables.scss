@@ -20,6 +20,8 @@ $body-color: #848484;
 $input-focus-border-color: $primary;
 $top-bar-color: #3d455a;
 $gray-brand: #f7f6f6;
+$nav: #5D5D5D;
+$active: #2F2F2F;
 
 // Misc
 
@@ -75,9 +77,4 @@ $container-max-widths: (
     xxl: 1360px
 );
 
-// Builder classes
-.bt-lime {background: lime;}
-.bt-pink {background: pink;}
-.bt-gold {background: gold;}
-.bt-teal {background: teal;}
-.bt-deeppink {background: deeppink;}
+$navbar-nav-link-padding-x: 2.8rem;

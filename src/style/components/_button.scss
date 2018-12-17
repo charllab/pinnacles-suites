@@ -27,9 +27,27 @@ button, .btn {
             font-family: 'Font Awesome 5 Free';
             content: '\f0a9';
             font-size: 1.4rem;
-            font-weight: normal;
+            font-weight: 900;
             font-style: normal;
             margin:0px 0px 0px 1.5rem;
+            text-decoration:none;
+            vertical-align: middle;
+        }
+
+    }
+
+    .btn-#{$color}-vid {
+
+        color: white;
+        background-color: $value;
+
+        &::after {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 400;
+            content: '\f144';
+            color: rgba(white, .63);
+            font-size: 1.4rem;
+            margin:0px 0px 0px .65rem;
             text-decoration:none;
             vertical-align: middle;
         }

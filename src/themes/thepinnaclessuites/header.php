@@ -19,122 +19,88 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo('url'); ?>/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php bloginfo('url'); ?>/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="<?php bloginfo('url'); ?>/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="<?php bloginfo('url'); ?>/favicon-16x16.png" sizes="16x16" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="<?php bloginfo('url'); ?>/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152"
+          href="<?php bloginfo('url'); ?>/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="<?php bloginfo('url'); ?>/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="<?php bloginfo('url'); ?>/favicon-16x16.png" sizes="16x16"/>
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/solid.css" integrity="sha384-aj0h5DVQ8jfwc8DA7JiM+Dysv7z+qYrFYZR+Qd/TwnmpDI6UaB3GJRRTdY8jYGS4" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/brands.css" integrity="sha384-whKHCkwP9f4MyD1vda26+XRyEg2zkyZezur14Kxc784RxUU1E7HvWVYj9EoJnUV7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/fontawesome.css" integrity="sha384-WK8BzK0mpgOdhCxq86nInFqSWLzR5UAsNg0MGX9aDaIIrFWQ38dGdhwnNCAoXFxL" crossorigin="anonymous">
-
-
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/solid.css"
+          integrity="sha384-aj0h5DVQ8jfwc8DA7JiM+Dysv7z+qYrFYZR+Qd/TwnmpDI6UaB3GJRRTdY8jYGS4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/brands.css"
+          integrity="sha384-whKHCkwP9f4MyD1vda26+XRyEg2zkyZezur14Kxc784RxUU1E7HvWVYj9EoJnUV7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/fontawesome.css"
+          integrity="sha384-WK8BzK0mpgOdhCxq86nInFqSWLzR5UAsNg0MGX9aDaIIrFWQ38dGdhwnNCAoXFxL" crossorigin="anonymous">
 
 
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="height: 100%;">
 
-<!--    <section class="topbar">-->
-<!--        <div class="container">-->
-<!--            <div id="topbarContent" class="d-flex justify-content-sm-end">-->
-<!--                <div class="mr-auto topbar__phoneNumber">-->
-<!--                    <a href="tel:2503092565"><i class="fas fa-phone"></i> (250) 309-2565</a></div>-->
-<!--                <div class="d-none d-lg-block mr-4 topbar__fluff">Helping you make smart investments</div>-->
-<!--                <div class="d-none d-lg-block topbar__getStarted">-->
-<!--                    <a href="--><?php //bloginfo('url'); ?><!--/contact" class="px-4 topbar__GetStarted">Get Started <i class="fas fa-arrow-circle-right"></i></a>-->
-<!--                </div>-->
-<!--                <div class="d-lg-none">-->
-<!--                    <button class="navbar-toggler white" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--                        Menu-->
-<!--                    </button>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
+<div id="page">
 
-    <section class="topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 mr-auto">
-                    <p class="mb-0">The Pinnacles is available for individual ownership:<br>
-                        <a href="#" target="_blank">Summer 2018 Sale Pricing →</a></p>
+<div class="d-block d-xl-flex" id="page-wrapper">
+
+    <div class="menu-column">
+
+
+
+        <div class="menu-column-inner d-xl-flex flex-xl-column">
+            <div class="menu-logo-wrapper d-flex d-xl-block">
+
+                <div class="menu-logo d-flex">
+                    <img src="<?php bloginfo('template_url'); ?>/images/tps-logo@2x.png" alt="The Pinnacles Suite logo" class="mx-auto">
                 </div>
-                <div class="col-md-6 d-flex align-self-center justify-content-end topbar__telcta">
-                    <a href="tel:2503092565"><i class="fas fa-phone"></i> 1-250-542-4548</a></div>
+
+                <div class="d-xl-none ml-auto">
+                    <button class="navbar-toggler white" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">
+                        Menu
+                    </button>
                 </div>
+            </div><!-- /.menu-logo -->
+
+            <div class="menu-items">
+                <nav class="navbar navbar-expand-xl p-0">
+                    <?php wp_nav_menu([
+                        'theme_location' => 'primary',
+                        'container_class' => 'collapse navbar-collapse',
+                        'container_id' => 'navbar-container',
+                        'menu_class' => 'navbar-nav d-flex w-100 flex-column',
+                        'fallback_cb' => '',
+                        'menu_id' => 'main-menu',
+                        'walker' => new understrap_WP_Bootstrap_Navwalker(),
+                    ]); ?>
+                </nav>
+            </div>
+            <div class="d-none d-xl-block mt-auto menu-socialmedia-wrapper">
+                <ul class="list-unstyled mb-0 menu-socialmedia-items">
+                    <li><a href="https://www.facebook.com/PinnaclesSuiteHotel" class="d-block" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.tripadvisor.com/Hotel_Review-g1973875-d4744981-Reviews-The_Pinnacles_Suite_Hotel-Silver_Star_Okanagan_Valley_British_Columbia.html" target="_blank"><i class="fab fa-tripadvisor" class="d-block"></i></a></li>
+                    <li><a href="https://www.instagram.com/thepinnaclesatsilverstar/" class="d-block" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
             </div>
         </div>
-    </section>
+
+    </div>
+
+    <div class="content-column">
+
+        <section class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                        <p class="mb-0">The Pinnacles is available for individual ownership:<br>
+                            <a href="#" target="_blank">Summer 2018 Sale Pricing →</a></p>
+                    </div>
+                    <div class="col-lg-6 d-lg-flex align-self-lg-center justify-content-lg-end text-center topbar__telcta">
+                        <a href="tel:2503092565"><i class="fas fa-phone"></i> 1-250-542-4548</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-    <?php if (is_front_page()) : ?>
-
-<!--       <section class="indexhero">-->
-<!--            <div class="container">-->
-<!--	            <div class="py-md-5 logo">-->
-<!--	                <h1 class="logo m-auto mb-0">-->
-<!--	                    <a rel="home" href="--><?php //echo esc_url(home_url('/')); ?><!--" title="--><?php //echo esc_attr(get_bloginfo('name', 'display')); ?><!--" itemprop="url" class="mb-0">-->
-<!--	                        --><?php //get_template_part('includes/svg', 'logo-lg'); ?>
-<!--	                            <span class="sr-only">--><?php //bloginfo('name'); ?><!--</span>-->
-<!--                        </a>-->
-<!--                    </h1>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
-<!---->
-<!--        <section class="mainMenu">-->
-<!--            <div class="container">-->
-<!--                <div id="menuItems">-->
-<!--                    <nav class="navbar navbar-expand-lg p-0">-->
-<!--                        --><?php //wp_nav_menu([
-//                            'theme_location' => 'primary',
-//                            'container_class' => 'collapse navbar-collapse',
-//                            'container_id' => 'navbar-container',
-//                            'menu_class' => 'navbar-nav d-flex w-100',
-//                            'fallback_cb' => '',
-//                            'menu_id' => 'main-menu',
-//                            'walker' => new understrap_WP_Bootstrap_Navwalker(),
-//                        ]); ?>
-<!--                    </nav>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
-
-        <?php else : ?>
-
-<!--            <div id="pagesHeaderLogo">-->
-<!--                <div class="container">-->
-<!--                    <div class="row">-->
-<!--                        <div class="col-12">-->
-<!--                            <a rel="home" href="--><?php //echo esc_url(home_url('/')); ?><!--" title="--><?php //echo esc_attr(get_bloginfo('name', 'display')); ?><!--" itemprop="url" class="mb-0">-->
-<!--	                            --><?php //get_template_part('includes/svg', 'logo-sm'); ?>
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <section class="mainMenu">-->
-<!--                <div class="container">-->
-<!--                    <div id="menuItems">-->
-<!--                        <nav class="navbar navbar-expand-lg p-0">-->
-<!--                            --><?php //wp_nav_menu([
-//                                'theme_location' => 'primary',
-//                                'container_class' => 'collapse navbar-collapse',
-//                                'container_id' => 'navbar-container',
-//                                'menu_class' => 'navbar-nav d-flex w-100',
-//                                'fallback_cb' => '',
-//                                'menu_id' => 'main-menu',
-//                                'walker' => new understrap_WP_Bootstrap_Navwalker(),
-//                            ]); ?>
-<!--                        </nav>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </section>-->
-
-        <?php endif; ?>

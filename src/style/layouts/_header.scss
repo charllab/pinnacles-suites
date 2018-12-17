@@ -9,19 +9,6 @@
         font-weight: 700;
         text-decoration: underline;
 	}
-
-    @include e(telcta) {
-
-        a {
-            font-size: 1.333333333rem;
-            font-weight: 700;
-            text-decoration: none;
-
-            i {
-                color: rgba(white, .24);
-            }
-        }
-    }
 }
 
 .navbar-toggler {
@@ -29,54 +16,23 @@
 	font-weight: 700;
 }
 
-.indexhero {
-	background-color: $gray-brand;
-	@include media-breakpoint-up(lg) {
-		background: $gray-brand url(../images/index-hero.jpg) no-repeat center right;
-		background-position-x: 25%;
-	}
-	@include random-min(99.375) {
-		background-position-x: right;
-	}
-}
-#main-logo-svg {
-	width: 398px;
-	@include media-breakpoint-down(sm) {
-		height: 162px;
-	}
-}
-#pages-logo-svg {
-	width: 398px;
-	height: 162px;
-}
-#pagesHeaderLogo {
-	@include media-breakpoint-down(md) {
-		background-color: $gray-brand;
-	}
-}
-
-.mainMenu {
-	background-color: $gray-brand;
-
-	.container {
-		@include media-breakpoint-down(xs) {
-			max-width: none;
-			padding: 0;
-		}
-	}
-}
-
 .navbar-nav {
 
 	.menu-item {
 		@extend .flex-fill;
 		text-align: center;
+        color: $nav;
+        @include media-breakpoint-up(lg) {
+            text-align: left;
+        }
 	}
 
 	.menu-item.active a,
 	.current-menu-ancestor.active a {
 		@include media-breakpoint-up(lg) {
-			border-bottom-color: $primary;
+			border-left-color: #ffcb00;
+            font-weight: 700;
+            color: $active;
 		}
 		@include media-breakpoint-down(md) {
 			background-color: $primary;
@@ -86,20 +42,38 @@
 
 	.nav-link {
 		font-size: 1.111111111rem;
-		color: $body-color;
-		border-bottom: $border-thickness solid #f7f6f6;
-		padding: 1.75rem 1.25rem 1.25rem 1.25rem;
+		color: $nav;
+		border-left: $border-thickness solid #f7f6f6;
+		padding: .5rem 2.8rem;
+        display: block;
 
 		&:hover {
-			border-bottom-color: $primary;
+            font-weight: 700;
 		}
 	}
 }
 
-.home .mainMenu {
-	background-color: #fff;
+.menu-socialmedia-wrapper {
+    background-color: #404040;
+}
 
-	.nav-link {
-		border-bottom-color: $white;
-	}
+.menu-socialmedia-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    li {
+        padding: .25rem 0;
+        display: flex;
+        justify-content: center;
+
+        &:nth-child(even) {
+            background-color: #606060;
+        }
+    }
+    a {
+        color: white;
+        width: 100%;
+        text-align: center;
+        font-size: 1.888888889rem;
+
+    }
 }
