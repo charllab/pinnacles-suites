@@ -82,8 +82,8 @@
 
             </footer>
 
-        </div><!-- /.content-column -->
-    </div><!-- /d-block d-xl-flex -->
+        </div><!-- side-b -->
+    </div><!-- sides-wrapper -->
 </div><!-- /#page -->
 
 <?php wp_footer(); ?>

@@ -1,3 +1,20 @@
+html,
+body {
+    min-width: 320px;
+}
+.side-a {
+    @include media-breakpoint-up(lg) {
+        width: 300px;
+        height: 100%;
+        position: fixed;
+    }
+}
+.side-b {
+    @include media-breakpoint-up(lg) {
+        margin-left: 300px;
+    }
+}
+
 
 #page {
     position: relative;
@@ -12,7 +29,6 @@
     }
 
 }
-
 
 .content-column {
     @include media-breakpoint-up(xl) {
@@ -46,10 +62,13 @@
 		padding: 2rem 0;
 	}
 }
-
+.home-newsletter-cta {
+    background-color: #555555;
+}
 
 .home-intro-cta {
-    background: teal;
+    background: #505d71 url('../images/index-hero-bg.jpg') no-repeat center;
+    background-size: cover;
     padding-top: 4rem;
     @include media-breakpoint-up(lg) {
         margin-bottom: 14rem;
@@ -114,16 +133,13 @@
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px 15px;
-    @include random-min(25) {
-        grid-template-columns: repeat(2, 1fr);
-    }
     @include media-breakpoint-up(sm) {
         grid-template-columns: repeat(4, 1fr);
     }
     @include media-breakpoint-up(xl) {
         grid-gap: 30px 30px;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 }
