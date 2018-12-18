@@ -36,6 +36,39 @@ button, .btn {
 
     }
 
+    .btn-#{$color}-menu {
+
+        color: white;
+        background: linear-gradient(to right, darken($value, 5%) 0%, $value 35%);
+        @include media-breakpoint-down(lg) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        width: 250px;
+        @include media-breakpoint-up(lg) {
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            padding-left: 2.5rem;
+            padding-right: .5rem;
+            //width: 250px;
+        }
+
+        &::after {
+            font-family: 'Font Awesome 5 Free';
+            content: '\f0a9';
+            font-size: 1.4rem;
+            font-weight: 900;
+            font-style: normal;
+            margin:0px 0px 0px .5rem;
+            text-decoration:none;
+            vertical-align: middle;
+            @include media-breakpoint-up(lg) {
+                margin:0px 0px 0px .5rem;
+            }
+        }
+
+    }
+
     .btn-#{$color}-vid {
 
         color: white;

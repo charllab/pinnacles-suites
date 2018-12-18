@@ -44,19 +44,23 @@
 <div id="page">
 
     <div class="sides-wrapper">
-        <div class="side-a d-flex flex-column" style="background: yellow">
+        <div class="side-a d-flex flex-column">
 
-            <div class="text-right d-block d-lg-none">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="text-primary">Menu</span>
-                </button>
+            <div class="text-sm-center mt-5 mb-4 mx-5 mx-ms-3 my-lg-4 mx-lg-0">
+                <a href="#">
+                    <img src="<?php bloginfo('template_url'); ?>/images/tps-logo-vert@2x.png" alt="The Pinnacles Suite logo" class="img-fluid d-lg-none my-3 my-sm-0">
+                    <img src="<?php bloginfo('template_url'); ?>/images/tps-logo@2x.png" alt="The Pinnacles Suite logo" class="img-fluid d-none d-lg-block mx-auto">
+                </a>
             </div>
 
-            <div class="text-center">
-                <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/tps-logo@2x.png" alt="The Pinnacles Suite logo" class="img-fluid"></a>
-            </div>
+            <nav class="navbar navbar-expand-lg p-0 mb-lg-4 navbar-light">
 
-            <nav class="navbar navbar-expand-lg p-0">
+                <div class="text-right d-block d-lg-none menu-switch">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
                 <?php wp_nav_menu([
                     'theme_location' => 'primary',
                     'container_class' => 'collapse navbar-collapse',
@@ -67,6 +71,10 @@
                     'walker' => new understrap_WP_Bootstrap_Navwalker(),
                 ]); ?>
             </nav>
+
+            <div class="text-center text-lg-left">
+                <a href="#" class="d-none btn btn-primary-menu mb-4 d-sm-inline-flex">Check Availability</a>
+            </div>
 
             <div class="mt-lg-auto menu-socialmedia-wrapper">
                 <ul class="list-unstyled mb-0 menu-socialmedia-items">

@@ -1,3 +1,25 @@
+input[type="text"] {
+    border-radius: 1.3333333333rem;
+}
+
+.group-breaker {
+    input[type="text"] {
+        border-radius: 1.3333333333rem;
+    }
+    @include media-breakpoint-down(sm) {
+        display: block;
+        input[type="text"] {
+            border-radius: 1.3333333333rem !important;
+            margin-bottom: .5rem;
+            width: 100%;
+        }
+        .btn {
+            border-radius: 1.3333333333rem !important;
+            width: 100%;
+        }
+    }
+}
+
 .gravity-forms-disabled-styles {
     ul {
         list-style: none;

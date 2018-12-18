@@ -1,14 +1,21 @@
 html,
 body {
     min-width: 320px;
+    @include media-breakpoint-down(sm) {
+        text-align: center;
+    }
 }
+
 .side-a {
+    background: white url('../images/menu-bg@2x.jpg') no-repeat 0 0;
     @include media-breakpoint-up(lg) {
         width: 300px;
         height: 100%;
         position: fixed;
+        box-shadow: 17px 0px 84px -5px rgba(0, 0, 0, 0.1);
     }
 }
+
 .side-b {
     @include media-breakpoint-up(lg) {
         margin-left: 300px;
@@ -19,12 +26,13 @@ body {
 #page {
     position: relative;
 }
+
 .menu-column {
 
     @include media-breakpoint-up(xl) {
         width: 22%;
         background-color: white;
-        box-shadow: 17px 0px 84px -5px rgba(0,0,0,0.1);
+        box-shadow: 17px 0px 84px -5px rgba(0, 0, 0, 0.1);
         position: relative;
     }
 
@@ -54,59 +62,103 @@ body {
         padding: 2rem 0;
     }
 
-	&.section--page {
-		padding: 2.5rem 0 4rem 0;
-	}
+    &.section--page {
+        padding: 2.5rem 0 4rem 0;
+    }
 
-	@include media-breakpoint-down(md) {
-		padding: 2rem 0;
-	}
+    @include media-breakpoint-down(md) {
+        padding: 2rem 0;
+    }
 }
+
 .home-newsletter-cta {
-    background-color: #555555;
+    overflow:hidden;
 }
 
 .home-intro-cta {
-    background: #505d71 url('../images/index-hero-bg.jpg') no-repeat center;
-    background-size: cover;
+    background: #fff url('../images/index-hero-bg.jpg') no-repeat top center;
     padding-top: 4rem;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
+        margin-bottom: 2.5rem;
+    }
+    @include media-breakpoint-up(xl) {
+        background-color: #505d71;
+        background-size: cover;
         margin-bottom: 14rem;
         padding-bottom: 14rem;
     }
     @include media-breakpoint-up(xxl) {
         padding-bottom: 20rem;
     }
+
     p.lead {
         margin-bottom: 3.5rem;
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             margin-bottom: 7rem;
         }
     }
 }
 
 .home-intro-cards {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         position: absolute;
     }
 }
 
 .btn-success, #gform_wrapper_1 .gform_button {
-	background-color: $primary;
-	border-color: $primary;
+    background-color: $primary;
+    border-color: $primary;
 }
+
 #gform_wrapper_1 .gform_footer {
-	text-align: left !important;
+    text-align: left !important;
 }
+.hone-newsletter-bgsplit {
+    .img-clipblock {
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+}
+.img-clip-1 {
+    background: url('../images/index-newsletter-img-1.jpg') no-repeat top center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    left: 0;
+    @include media-breakpoint-up(xl) {
+        -webkit-clip-path: polygon(0 0%, 100% 0%, 89% 100%, 0% 100%);
+        clip-path: polygon(0 0%, 100% 0%, 89% 100%, 0% 100%);
+        width: 73%;
+    }
+}
+
+.img-clip-2 {
+    @include media-breakpoint-down(xl) {
+        display: none;
+    }
+    @include media-breakpoint-up(xl) {
+        background: url('../images/index-newsletter-img-2.jpg') no-repeat left center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        -webkit-clip-path: polygon(24% 0%, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(24% 0%, 100% 0%, 100% 100%, 0% 100%);
+        width: 40%;
+        right: 0;
+    }
+}
+
 
 .card {
     border-radius: 0;
     border: none;
-    box-shadow: 0px 6px 70px -15px rgba(0,0,0,0.45);
+    box-shadow: 0px 6px 70px -15px rgba(0, 0, 0, 0.45);
+
     img {
         border-bottom: 8px solid $site-yellow;
     }
 }
+
 .card-img-top {
     border-radius: 0;
 }
@@ -118,16 +170,19 @@ body {
 .accomodation-deck {
     overflow-y: hidden;
     padding-bottom: 2.5rem;
+
     .card {
         min-width: 360px;
         width: 360px;
         margin-right: 30px;
         margin-left: 30px;
     }
+
     .card-body {
         padding-bottom: 2.5rem;
     }
 }
+
 .instagram-gallery {
     max-width: 1600px;
     margin-left: auto;

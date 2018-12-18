@@ -1,14 +1,23 @@
 .topbar {
 	background: $top-bar-color;
-	color: white;
+	color: rgba(white, 0.75);
     padding: 1rem 0;
     border-top: 4px solid darken($top-bar-color,7.5%);
 
 	a {
-		color: white;
+		color:rgba(white, 0.75);
         font-weight: 700;
         text-decoration: underline;
 	}
+    @include e(telcta) {
+        i {
+            color:rgba(white, 0.25);
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
 }
 
 .navbar-toggler {
@@ -30,7 +39,7 @@
 	.menu-item.active a,
 	.current-menu-ancestor.active a {
 		@include media-breakpoint-up(lg) {
-			border-left-color: #ffcb00;
+            background: url('../images/active-nob@2x.png') no-repeat -6px center;
             font-weight: 700;
             color: $active;
 		}
@@ -43,7 +52,6 @@
 	.nav-link {
 		font-size: 1.111111111rem;
 		color: $nav;
-		border-left: $border-thickness solid #f7f6f6;
 		padding: .5rem 2.8rem;
         display: block;
 
@@ -51,6 +59,14 @@
             font-weight: 700;
 		}
 	}
+}
+.menu-switch {
+    position: absolute;
+    right: 1rem;
+    top: -134px;
+    @include media-breakpoint-up(sm) {
+        top: -122px;
+    }
 }
 
 .menu-socialmedia-wrapper {
@@ -61,7 +77,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     li {
-        padding: .25rem 0;
+        padding: 5px 0;
         display: flex;
         justify-content: center;
 
