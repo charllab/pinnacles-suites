@@ -68,7 +68,8 @@ const headerJS = [
     'node_modules/fastclick/lib/fastclick.js',
     'node_modules/moment/min/moment.min.js',
     'node_modules/parsleyjs/dist/parsley.min.js',
-    'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'
+    'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+    'node_modules/owl.carousel/dist/owl.carousel.min.js'
 ];
 
 const footerJS = [

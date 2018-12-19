@@ -159,6 +159,16 @@ get_header(); ?>
                 </div>
         </section>
 
+        <div class="owl-carousel owl-theme">
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+        </div>
+
         <!--        <section class="d-flex accomodation-deck">-->
         <!---->
         <!--            <div class="card">-->

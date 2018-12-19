@@ -1,5 +1,8 @@
 jQuery(function () {
 
+    // owl carousel
+    jQuery('.owl-carousel').owlCarousel();
+
     // Scrolling anchors
     jQuery('.scrollable-anchor').on('click', function (e) {
         e.preventDefault();
