@@ -173,6 +173,33 @@ body {
     -webkit-background-size: cover;
     background-size: cover;
 }
+
+.acc-btn-set {
+    background-color:red;
+
+    a {
+        line-height: 48px;
+        height: 48px;
+        text-align: center;
+        display: inline-block;
+        width: 50px;
+        color: white;
+        background-color: #606060;
+        i.fas {
+            font-size: 24px;
+            vertical-align: text-bottom;
+        }
+    }
+    a.acc-btn-left {
+        border-radius: 2rem 0 0 2rem;
+        padding-left: 5px;
+    }
+    a.acc-btn-right{
+        border-radius: 0 2rem 2rem 0;
+        padding-right: 5px;
+        margin-left: -1px;
+    }
+}
 .accommodation-deck {
 
     overflow-y: hidden;
