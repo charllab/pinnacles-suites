@@ -28,7 +28,7 @@
                     </p>
                     <p><a href="mailto:reserve@pinnacles.com">reserve@pinnacles.com</a></p>
                 </div>
-                <div class="col-sm-6 col-xxl-3 text-center text-sm-left">
+                <div class="col-sm-6 col-xxl-3">
                     <h4>Navigation</h4>
                     <ul class="list-unstyled mb-0">
                         <li><a href="<?php bloginfo('url'); ?>/your-stay">Your Stay</a></li>

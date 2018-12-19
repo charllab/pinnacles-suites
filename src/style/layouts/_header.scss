@@ -38,15 +38,12 @@
 
 	.menu-item.active a,
 	.current-menu-ancestor.active a {
-		@include media-breakpoint-up(lg) {
+
             background: url('../images/active-nob@2x.png') no-repeat -6px center;
             font-weight: 700;
             color: $active;
-		}
-		@include media-breakpoint-down(md) {
-			background-color: $primary;
-			color: white;
-		}
+
+
 	}
 
 	.nav-link {

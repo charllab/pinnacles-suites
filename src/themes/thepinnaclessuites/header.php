@@ -48,41 +48,56 @@
 
             <div class="text-sm-center mt-5 mb-4 mx-5 mx-ms-3 my-lg-4 mx-lg-0">
                 <a href="#">
-                    <img src="<?php bloginfo('template_url'); ?>/images/tps-logo-vert@2x.png" alt="The Pinnacles Suite logo" class="img-fluid d-lg-none my-3 my-sm-0">
-                    <img src="<?php bloginfo('template_url'); ?>/images/tps-logo@2x.png" alt="The Pinnacles Suite logo" class="img-fluid d-none d-lg-block mx-auto">
+                    <img src="<?php bloginfo('template_url'); ?>/images/tps-logo-vert@2x.png"
+                         alt="The Pinnacles Suite logo" class="img-fluid d-lg-none my-3 my-sm-0">
+                    <img src="<?php bloginfo('template_url'); ?>/images/tps-logo@2x.png" alt="The Pinnacles Suite logo"
+                         class="img-fluid d-none d-lg-block mx-auto">
                 </a>
             </div>
 
             <nav class="navbar navbar-expand-lg p-0 mb-lg-4 navbar-light">
 
                 <div class="text-right d-block d-lg-none menu-switch">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container"
+                            aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
 
-                <?php wp_nav_menu([
-                    'theme_location' => 'primary',
-                    'container_class' => 'collapse navbar-collapse',
-                    'container_id' => 'navbar-container',
-                    'menu_class' => 'navbar-nav d-flex w-100 flex-column',
-                    'fallback_cb' => '',
-                    'menu_id' => 'main-menu',
-                    'walker' => new understrap_WP_Bootstrap_Navwalker(),
-                ]); ?>
+                <div id="navbar-container" class="navbar-collapse collapse d-flex flex-column">
+
+                    <?php wp_nav_menu([
+                        'theme_location' => 'primary',
+                        'container_class' => 'w-100',
+                        'container_id' => '',
+                        'menu_class' => 'navbar-nav d-flex w-100 flex-column',
+                        'fallback_cb' => '',
+                        'menu_id' => 'main-menu',
+                        'walker' => new understrap_WP_Bootstrap_Navwalker(),
+                    ]); ?>
+
+                    <div class="text-center text-lg-left w-100 mt-3 mt-lg-5">
+                        <a href="#" class="btn btn-primary-menu mb-4 d-inline-flex">Check Availability</a>
+                    </div>
+
+
+                    <div class="mt-lg-auto menu-socialmedia-wrapper w-100">
+                        <ul class="list-unstyled mb-0 menu-socialmedia-items">
+                            <li><a href="https://www.facebook.com/PinnaclesSuiteHotel" class="d-block"
+                                   target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                            <li>
+                                <a href="https://www.tripadvisor.com/Hotel_Review-g1973875-d4744981-Reviews-The_Pinnacles_Suite_Hotel-Silver_Star_Okanagan_Valley_British_Columbia.html"
+                                   target="_blank"><i class="fab fa-tripadvisor" class="d-block"></i></a></li>
+                            <li><a href="https://www.instagram.com/thepinnaclesatsilverstar/" class="d-block"
+                                   target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+
+
+                </div><!-- navbar-collapse -->
+
+
             </nav>
-
-            <div class="text-center text-lg-left">
-                <a href="#" class="d-none btn btn-primary-menu mb-4 d-sm-inline-flex">Check Availability</a>
-            </div>
-
-            <div class="mt-lg-auto menu-socialmedia-wrapper">
-                <ul class="list-unstyled mb-0 menu-socialmedia-items">
-                    <li><a href="https://www.facebook.com/PinnaclesSuiteHotel" class="d-block" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="https://www.tripadvisor.com/Hotel_Review-g1973875-d4744981-Reviews-The_Pinnacles_Suite_Hotel-Silver_Star_Okanagan_Valley_British_Columbia.html" target="_blank"><i class="fab fa-tripadvisor" class="d-block"></i></a></li>
-                    <li><a href="https://www.instagram.com/thepinnaclesatsilverstar/" class="d-block" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-            </div>
 
 
         </div><!-- /side-a -->
