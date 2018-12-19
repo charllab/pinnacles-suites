@@ -166,8 +166,15 @@ body {
 .card-body {
     padding: 1.8rem 2.25rem;
 }
+.accommodation-bg {
+    padding-top: 4.333333333rem;
+    border-top: 8px solid #c6c6c6;
+    background: url('../images/bg-accommodation.png') no-repeat 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.accommodation-deck {
 
-.accomodation-deck {
     overflow-y: hidden;
     padding-bottom: 2.5rem;
 

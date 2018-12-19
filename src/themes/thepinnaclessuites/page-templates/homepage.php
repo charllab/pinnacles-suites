@@ -95,7 +95,6 @@ get_header(); ?>
                 </div><!-- row -->
 
 
-
             </div><!-- container -->
         </section>
 
@@ -143,114 +142,126 @@ get_header(); ?>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container">
 
-                <div class="row">
-                    <div class="col-md-5 offset-md-1">
-                        <h2>Suites & Townhomes</h2>
-                        <p>Our accommodations sleep up to 17 with the comforts of home and the service of a hotel.</p>
-                    </div>
-                    <div class="col-md-3 ml-md-auto">
-                        [[buttons]]
-                        <a href="#" class="btn btn-primary">View All</a>
-                    </div>
+        <section class="accommodation-bg">
 
+            <section>
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-5 offset-md-1">
+                            <h2>Suites & Townhomes</h2>
+                            <p>Our accommodations sleep up to 17 with the comforts of home and the service of a
+                                hotel.</p>
+                        </div>
+                        <div class="col-md-3 ml-md-auto">
+                            [[buttons]]
+                            <a href="#" class="btn btn-primary">View All</a>
+                        </div>
+
+                    </div>
+            </section>
+
+            <!--        <div class="owl-carousel owl-theme">-->
+            <!--            <div> Your Content </div>-->
+            <!--            <div> Your Content </div>-->
+            <!--            <div> Your Content </div>-->
+            <!--            <div> Your Content </div>-->
+            <!--            <div> Your Content </div>-->
+            <!--            <div> Your Content </div>-->
+            <!--            <div> Your Content </div>-->
+            <!--        </div>-->
+
+            <section class="d-flex accommodation-deck">
+
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Townhouse #25</h4>
+                        <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
+                            hot
+                            tub.</p>
+                        <ul>
+                            <li>Sleeps up to 17</li>
+                            <li>Pinnacles Slopeside</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary-arr">View Details</a>
+                    </div>
                 </div>
-        </section>
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Townhouse #25</h4>
+                        <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
+                            hot
+                            tub.</p>
+                        <ul>
+                            <li>Sleeps up to 17</li>
+                            <li>Pinnacles Slopeside</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary-arr">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Townhouse #25</h4>
+                        <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
+                            hot
+                            tub.</p>
+                        <ul>
+                            <li>Sleeps up to 17</li>
+                            <li>Pinnacles Slopeside</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary-arr">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Townhouse #25</h4>
+                        <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
+                            hot
+                            tub.</p>
+                        <ul>
+                            <li>Sleeps up to 17</li>
+                            <li>Pinnacles Slopeside</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary-arr">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Townhouse #25</h4>
+                        <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
+                            hot
+                            tub.</p>
+                        <ul>
+                            <li>Sleeps up to 17</li>
+                            <li>Pinnacles Slopeside</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary-arr">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Townhouse #25</h4>
+                        <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
+                            hot
+                            tub.</p>
+                        <ul>
+                            <li>Sleeps up to 17</li>
+                            <li>Pinnacles Slopeside</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary-arr">View Details</a>
+                    </div>
+                </div>
 
-        <div class="owl-carousel owl-theme">
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-        </div>
+            </section>
 
-        <!--        <section class="d-flex accomodation-deck">-->
-        <!---->
-        <!--            <div class="card">-->
-        <!--                <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">-->
-        <!--                <div class="card-body">-->
-        <!--                    <h4 class="card-title">Townhouse #25</h4>-->
-        <!--                    <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and hot-->
-        <!--                        tub.</p>-->
-        <!--                    <ul>-->
-        <!--                        <li>Sleeps up to 17</li>-->
-        <!--                        <li>Pinnacles Slopeside</li>-->
-        <!--                    </ul>-->
-        <!--                    <a href="#" class="btn btn-primary-arr">View Details</a>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--            <div class="card">-->
-        <!--                <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">-->
-        <!--                <div class="card-body">-->
-        <!--                    <h4 class="card-title">Townhouse #25</h4>-->
-        <!--                    <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and hot-->
-        <!--                        tub.</p>-->
-        <!--                    <ul>-->
-        <!--                        <li>Sleeps up to 17</li>-->
-        <!--                        <li>Pinnacles Slopeside</li>-->
-        <!--                    </ul>-->
-        <!--                    <a href="#" class="btn btn-primary-arr">View Details</a>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--            <div class="card">-->
-        <!--                <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">-->
-        <!--                <div class="card-body">-->
-        <!--                    <h4 class="card-title">Townhouse #25</h4>-->
-        <!--                    <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and hot-->
-        <!--                        tub.</p>-->
-        <!--                    <ul>-->
-        <!--                        <li>Sleeps up to 17</li>-->
-        <!--                        <li>Pinnacles Slopeside</li>-->
-        <!--                    </ul>-->
-        <!--                    <a href="#" class="btn btn-primary-arr">View Details</a>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--            <div class="card">-->
-        <!--                <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">-->
-        <!--                <div class="card-body">-->
-        <!--                    <h4 class="card-title">Townhouse #25</h4>-->
-        <!--                    <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and hot-->
-        <!--                        tub.</p>-->
-        <!--                    <ul>-->
-        <!--                        <li>Sleeps up to 17</li>-->
-        <!--                        <li>Pinnacles Slopeside</li>-->
-        <!--                    </ul>-->
-        <!--                    <a href="#" class="btn btn-primary-arr">View Details</a>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--            <div class="card">-->
-        <!--                <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">-->
-        <!--                <div class="card-body">-->
-        <!--                    <h4 class="card-title">Townhouse #25</h4>-->
-        <!--                    <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and hot-->
-        <!--                        tub.</p>-->
-        <!--                    <ul>-->
-        <!--                        <li>Sleeps up to 17</li>-->
-        <!--                        <li>Pinnacles Slopeside</li>-->
-        <!--                    </ul>-->
-        <!--                    <a href="#" class="btn btn-primary-arr">View Details</a>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--            <div class="card">-->
-        <!--                <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">-->
-        <!--                <div class="card-body">-->
-        <!--                    <h4 class="card-title">Townhouse #25</h4>-->
-        <!--                    <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and hot-->
-        <!--                        tub.</p>-->
-        <!--                    <ul>-->
-        <!--                        <li>Sleeps up to 17</li>-->
-        <!--                        <li>Pinnacles Slopeside</li>-->
-        <!--                    </ul>-->
-        <!--                    <a href="#" class="btn btn-primary-arr">View Details</a>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!---->
-        <!--        </section>-->
+        </section><!-- accommodation-bg-->
 
         <section class="section">
 
