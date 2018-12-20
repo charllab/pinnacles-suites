@@ -175,32 +175,6 @@ body {
     -webkit-background-size: cover;
     background-size: cover;
 }
-
-.acc-btn-set {
-    
-    a {
-        line-height: 40px;
-        height: 39.5px;
-        text-align: center;
-        display: inline-block;
-        width: 50px;
-        color: white;
-        background-color: #606060;
-        i.fas {
-            font-size: 24px;
-            vertical-align: text-bottom;
-        }
-    }
-    a.acc-btn-left {
-        border-radius: 2rem 0 0 2rem;
-        padding-left: 5px;
-    }
-    a.acc-btn-right{
-        border-radius: 0 2rem 2rem 0;
-        padding-right: 5px;
-        margin-left: -1px;
-    }
-}
 .accommodation-deck {
 
     overflow-y: hidden;
@@ -231,5 +205,64 @@ body {
     @include media-breakpoint-up(xl) {
         grid-gap: 30px 30px;
         grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+
+.acc-btn-set {
+
+    a {
+        line-height: 40px;
+        height: 39.5px;
+        text-align: center;
+        display: inline-block;
+        width: 50px;
+        color: white;
+        background-color: #606060;
+        i.fas {
+            font-size: 24px;
+            vertical-align: text-bottom;
+        }
+    }
+    a.acc-btn-left {
+        border-radius: 2rem 0 0 2rem;
+        padding-left: 5px;
+    }
+    a.acc-btn-right{
+        border-radius: 0 2rem 2rem 0;
+        padding-right: 5px;
+        margin-left: -1px;
+    }
+}
+
+.owl-nav {
+    background: red;
+    display: inline-block;
+    position: absolute;
+    top: -90px;
+    right: 320px;
+    border-radius: 2rem;
+}
+.owl-nav button {
+    line-height: 40px;
+    height: 39.5px;
+    text-align: center;
+    display: inline-block;
+    width: 50px;
+    color: white;
+    background-color: #606060;
+    i.fas {
+        font-size: 24px;
+        vertical-align: text-bottom;
+    }
+}
+button.owl-next {
+    &:hover {
+        color: white;
+    }
+}
+button.owl-prev {
+    &:hover {
+        color: white;
     }
 }

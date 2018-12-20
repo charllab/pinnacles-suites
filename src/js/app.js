@@ -2,6 +2,7 @@ jQuery(function () {
 
     // owl carousel
     jQuery('.owl-carousel').owlCarousel({
+        navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
         dots: true,
         loop:true,
         margin:10,
