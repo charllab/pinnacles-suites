@@ -47,7 +47,7 @@
         <div class="side-a d-flex flex-column">
 
             <div class="text-sm-center mt-5 mb-4 mx-5 mx-ms-3 my-lg-4 mx-lg-0">
-                <a href="#">
+                <a href="<?php bloginfo('url'); ?>">
                     <img src="<?php bloginfo('template_url'); ?>/images/tps-logo-vert@2x.png"
                          alt="The Pinnacles Suite logo" class="img-fluid d-lg-none my-3 my-sm-0">
                     <img src="<?php bloginfo('template_url'); ?>/images/tps-logo@2x.png" alt="The Pinnacles Suite logo"
@@ -55,7 +55,7 @@
                 </a>
             </div>
 
-            <nav class="navbar navbar-expand-lg p-0 mb-lg-4 navbar-light">
+            <nav class="navbar navbar-expand-lg p-0 navbar-light c-flex c-flex-colmn c-height-100">
 
                 <div class="text-right d-block d-lg-none menu-switch">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container"
@@ -64,7 +64,7 @@
                     </button>
                 </div>
 
-                <div id="navbar-container" class="navbar-collapse collapse d-flex flex-column">
+                <div id="navbar-container" class="navbar-collapse collapse c-flex c-flex-colmn w-100">
 
                     <?php wp_nav_menu([
                         'theme_location' => 'primary',

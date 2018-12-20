@@ -154,8 +154,8 @@ get_header(); ?>
                             <p>Our accommodations sleep up to 17 with the comforts of home and the service of a
                                 hotel.</p>
                         </div>
-                        <div class="col-md-3 ml-md-auto d-flex align-items-start">
-                            <div class="acc-btn-set d-flex">
+                        <div class="col-md-3 ml-md-auto d-flex align-items-start justify-content-around">
+                            <div class="acc-btn-set d-flex justify-content-between">
                                 <a href="#" class="acc-btn-left"><i class="fas fa-arrow-left"></i></a>
                                 <a href="#" class="acc-btn-right"><i class="fas fa-arrow-right"></i></a>
                             </div>
