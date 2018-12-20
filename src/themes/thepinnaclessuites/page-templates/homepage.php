@@ -156,8 +156,8 @@ get_header(); ?>
                         </div>
                         <div class="col-md-3 ml-md-auto d-flex align-items-start justify-content-around">
                             <div class="acc-btn-set d-flex justify-content-between">
-                                <a href="#" class="acc-btn-left"><i class="fas fa-arrow-left"></i></a>
-                                <a href="#" class="acc-btn-right"><i class="fas fa-arrow-right"></i></a>
+                                <a role="presentation" class="acc-btn-left"><span aria-label="Previous"><i class="fas fa-arrow-left"></i></span></a>
+                                <a role="presentation" class="acc-btn-right"><span aria-label="Next"><i class="fas fa-arrow-right"></i></span></a>
                             </div>
 
                             <a href="#" class="btn btn-primary">View All</a>
@@ -166,20 +166,10 @@ get_header(); ?>
                     </div>
             </section>
 
-            <!--        <div class="owl-carousel owl-theme">-->
-            <!--            <div> Your Content </div>-->
-            <!--            <div> Your Content </div>-->
-            <!--            <div> Your Content </div>-->
-            <!--            <div> Your Content </div>-->
-            <!--            <div> Your Content </div>-->
-            <!--            <div> Your Content </div>-->
-            <!--            <div> Your Content </div>-->
-            <!--        </div>-->
-
-            <section class="d-flex accommodation-deck">
-
+            <div class="owl-carousel owl-theme">
                 <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">
+                    <img class="card-img-top"
+                         src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Townhouse #25</h4>
                         <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
@@ -193,7 +183,8 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">
+                    <img class="card-img-top"
+                         src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Townhouse #25</h4>
                         <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
@@ -207,7 +198,8 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">
+                    <img class="card-img-top"
+                         src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Townhouse #25</h4>
                         <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
@@ -221,7 +213,8 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">
+                    <img class="card-img-top"
+                         src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Townhouse #25</h4>
                         <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
@@ -235,7 +228,8 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">
+                    <img class="card-img-top"
+                         src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Townhouse #25</h4>
                         <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
@@ -249,7 +243,8 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/360x294" alt="">
+                    <img class="card-img-top"
+                         src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Townhouse #25</h4>
                         <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
@@ -262,10 +257,7 @@ get_header(); ?>
                         <a href="#" class="btn btn-primary-arr">View Details</a>
                     </div>
                 </div>
-
-            </section>
-
-        </section><!-- accommodation-bg-->
+            </div>
 
         <section class="section">
 

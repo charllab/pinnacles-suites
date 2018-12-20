@@ -1,7 +1,35 @@
 jQuery(function () {
 
     // owl carousel
-    jQuery('.owl-carousel').owlCarousel();
+    jQuery('.owl-carousel').owlCarousel({
+        dots: true,
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true,
+                loop:true
+            },
+            600:{
+                items:2,
+                nav:true,
+                loop:true
+            },
+            1200:{
+                items:3,
+                nav:true,
+                loop:true
+            },
+            1600:{
+                items:4,
+                nav:true,
+                loop:true
+            }
+
+        }
+    });
 
     // Scrolling anchors
     jQuery('.scrollable-anchor').on('click', function (e) {
