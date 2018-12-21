@@ -186,12 +186,19 @@ body {
     max-width: 400px;
 }
 
-.minki {
+.instagram-user {
+    a {
+        color: $body-color;
+    }
     @include media-breakpoint-down(sm) {
         font-size: .85rem;
     }
 }
-
+.instagram-intro {
+ i {
+     color: #201b34;
+ }
+}
 .instagram-gallery {
     max-width: 1540px;
     margin-left: auto;

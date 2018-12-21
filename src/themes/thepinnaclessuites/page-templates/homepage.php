@@ -259,7 +259,7 @@ get_header(); ?>
 
         <section class="section">
 
-            <div class="container mb-5">
+            <div class="container mb-5 instagram-intro">
                 <div class="row">
                     <div class="col-md-10 offset-md-1 d-flex">
                         <div class="mr-3">
@@ -267,7 +267,7 @@ get_header(); ?>
                         </div>
                         <div class="align-self-center text-left">
                             <h2 class="mb-0">Instagram</h2>
-                            <p class="mb-0 minki"><a href="#">@thepinnaclesatsilverstar</a></p>
+                            <p class="mb-0 instagram-user"><a href="#">@thepinnaclesatsilverstar</a></p>
                         </div>
                     </div>
                 </div>
