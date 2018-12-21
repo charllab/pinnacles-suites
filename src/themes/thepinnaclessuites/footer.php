@@ -60,7 +60,7 @@
                         Silver&nbsp;Star&nbsp;Mountain.</p>
                     <form>
                         <div class="form-row mb-3">
-                            <input type="text" class="form-control mb-2" placeholder="Your Email" aria-label="Your Email"
+                            <input type="text" class="form-control mb-2 text-center" placeholder="Your Email" aria-label="Your Email"
                                    aria-describedby="newsletter-sign-up">
                             <button class="btn btn-secondary-arr w-100" type="button">Subscribe</button>
                         </div>

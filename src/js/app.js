@@ -3,17 +3,19 @@ jQuery(function () {
     // owl carousel
     jQuery('.owl-carousel').owlCarousel({
         navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
-        dots: true,
+        dots: false,
         loop:true,
-        margin:10,
         responsiveClass:true,
+        navContainer: '#customNav',
+        margin: 15,
+        autoplay: true,
         responsive:{
             0:{
                 items:1,
                 nav:true,
                 loop:true
             },
-            600:{
+            700:{
                 items:2,
                 nav:true,
                 loop:true

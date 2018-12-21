@@ -118,7 +118,7 @@ get_header(); ?>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section mb-3">
             <div class="container">
 
                 <div class="row">
@@ -149,17 +149,15 @@ get_header(); ?>
                 <div class="container">
 
                     <div class="row">
-                        <div class="col-md-5 offset-md-1">
+                        <div class="col-10 offset-1 col-xl-5 offset-md-1">
                             <h2>Suites & Townhomes</h2>
                             <p>Our accommodations sleep up to 17 with the comforts of home and the service of a
                                 hotel.</p>
                         </div>
-                        <div class="col-md-3 ml-md-auto d-flex align-items-start justify-content-around">
+                        <div class="col-10 offset-1 offset-xl-0 col-xl-4 mx-auto mr-xl-0 mb-5 mb-xl-0 d-flex align-items-start justify-content-around acc-controls">
                             <div class="acc-btn-set d-flex justify-content-between">
-                                <a role="presentation" class="acc-btn-left"><span aria-label="Previous"><i class="fas fa-arrow-left"></i></span></a>
-                                <a role="presentation" class="acc-btn-right"><span aria-label="Next"><i class="fas fa-arrow-right"></i></span></a>
+                                <div id="customNav" class="owl-nav d-flex"></div>
                             </div>
-
                             <a href="#" class="btn btn-primary">View All</a>
                         </div>
 
@@ -175,7 +173,7 @@ get_header(); ?>
                         <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
                             hot
                             tub.</p>
-                        <ul>
+                        <ul class="list-unstyled">
                             <li>Sleeps up to 17</li>
                             <li>Pinnacles Slopeside</li>
                         </ul>
@@ -190,7 +188,7 @@ get_header(); ?>
                         <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
                             hot
                             tub.</p>
-                        <ul>
+                        <ul class="list-unstyled">
                             <li>Sleeps up to 17</li>
                             <li>Pinnacles Slopeside</li>
                         </ul>
@@ -205,7 +203,7 @@ get_header(); ?>
                         <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
                             hot
                             tub.</p>
-                        <ul>
+                        <ul class="list-unstyled">
                             <li>Sleeps up to 17</li>
                             <li>Pinnacles Slopeside</li>
                         </ul>
@@ -220,7 +218,7 @@ get_header(); ?>
                         <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
                             hot
                             tub.</p>
-                        <ul>
+                        <ul class="list-unstyled">
                             <li>Sleeps up to 17</li>
                             <li>Pinnacles Slopeside</li>
                         </ul>
@@ -235,7 +233,7 @@ get_header(); ?>
                         <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
                             hot
                             tub.</p>
-                        <ul>
+                        <ul class="list-unstyled">
                             <li>Sleeps up to 17</li>
                             <li>Pinnacles Slopeside</li>
                         </ul>
@@ -250,7 +248,7 @@ get_header(); ?>
                         <p class="card-text">Well-appointed bedrooms, views and the all-important heated sun-deck and
                             hot
                             tub.</p>
-                        <ul>
+                        <ul class="list-unstyled">
                             <li>Sleeps up to 17</li>
                             <li>Pinnacles Slopeside</li>
                         </ul>
