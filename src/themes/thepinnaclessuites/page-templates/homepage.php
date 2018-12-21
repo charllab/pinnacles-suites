@@ -265,9 +265,9 @@ get_header(); ?>
                         <div class="mr-3">
                             <i class="fab fa-instagram fa-5x"></i>
                         </div>
-                        <div class="align-self-center">
+                        <div class="align-self-center text-left">
                             <h2 class="mb-0">Instagram</h2>
-                            <p class="mb-0"><a href="#">@thepinnaclesatsilverstar</a></p>
+                            <p class="mb-0 minki"><a href="#">@thepinnaclesatsilverstar</a></p>
                         </div>
                     </div>
                 </div>
@@ -277,25 +277,29 @@ get_header(); ?>
                 <div class="instagram-gallery">
 
                     <img src="<?php bloginfo('template_url'); ?>/images/index-instagram-img-1.jpg" alt=""
-                         class="img-fluid mx-auto">
+                         class="img-fluid">
                     <img src="<?php bloginfo('template_url'); ?>/images/index-instagram-img-2.jpg" alt=""
-                         class="img-fluid mx-auto">
+                         class="img-fluid">
                     <img src="<?php bloginfo('template_url'); ?>/images/index-instagram-img-3.jpg" alt=""
-                         class="img-fluid mx-auto">
+                         class="img-fluid">
                     <img src="<?php bloginfo('template_url'); ?>/images/index-instagram-img-4.jpg" alt=""
-                         class="img-fluid mx-auto">
+                         class="img-fluid">
                     <img src="<?php bloginfo('template_url'); ?>/images/index-instagram-img-5.jpg" alt=""
-                         class="img-fluid mx-auto">
+                         class="img-fluid">
                     <img src="<?php bloginfo('template_url'); ?>/images/index-instagram-img-6.jpg" alt=""
-                         class="img-fluid mx-auto">
+                         class="img-fluid">
                     <img src="<?php bloginfo('template_url'); ?>/images/index-instagram-img-7.jpg" alt=""
-                         class="img-fluid mx-auto">
+                         class="img-fluid">
                     <img src="<?php bloginfo('template_url'); ?>/images/index-instagram-img-8.jpg" alt=""
-                         class="img-fluid mx-auto">
+                         class="img-fluid">
                     <img src="<?php bloginfo('template_url'); ?>/images/index-instagram-img-9.jpg" alt=""
-                         class="img-fluid mx-auto d-none d-xl-block">
+                         class="img-fluid">
                     <img src="<?php bloginfo('template_url'); ?>/images/index-instagram-img-10.jpg" alt=""
-                         class="img-fluid mx-auto d-none d-xl-block">
+                         class="img-fluid">
+                    <img src="<?php bloginfo('template_url'); ?>/images/index-instagram-img-1.jpg" alt=""
+                         class="img-fluid">
+                    <img src="<?php bloginfo('template_url'); ?>/images/index-instagram-img-2.jpg" alt=""
+                         class="img-fluid">
 
                 </div>
             </div>
