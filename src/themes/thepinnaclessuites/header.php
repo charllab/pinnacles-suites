@@ -47,7 +47,7 @@
         <div class="side-a d-flex flex-column">
 
             <div class="text-sm-center mt-5 mb-4 mx-5 mx-ms-3 my-lg-4 mx-lg-0">
-                <a href="<?php bloginfo('url'); ?>">
+                <a href="<?php bloginfo('url'); ?>" class="logo-h">
                     <img src="<?php bloginfo('template_url'); ?>/images/tps-logo-vert@2x.png"
                          alt="The Pinnacles Suite logo" class="img-fluid d-lg-none my-3 my-sm-0">
                     <img src="<?php bloginfo('template_url'); ?>/images/tps-logo@2x.png" alt="The Pinnacles Suite logo"
@@ -82,7 +82,7 @@
 
 
                     <div class="mt-lg-auto menu-socialmedia-wrapper w-100">
-                        <ul class="list-unstyled mb-0 menu-socialmedia-items">
+                        <ul class="list-unstyled mb-0 menu-socialmedia-items w-100">
                             <li><a href="https://www.facebook.com/PinnaclesSuiteHotel" class="d-block"
                                    target="_blank"><i class="fab fa-facebook-square"></i></a></li>
                             <li>

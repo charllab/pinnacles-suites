@@ -40,7 +40,7 @@ get_header(); ?>
                 <div class="row justify-content-center home-intro-cards">
                     <div class="col-md-6 col-xl-5 mb-5">
                         <div class="card">
-                            <img class="card-img-top img-fluid"
+                            <img class="card-img-top img-fluid d-block h-100"
                                  src="<?php bloginfo('template_url'); ?>/images/index-suites-and-townhomes.jpg"
                                  alt="Card image cap">
                             <div class="card-body">
@@ -53,7 +53,7 @@ get_header(); ?>
                     </div>
                     <div class="col-md-6 col-xl-5 mb-5">
                         <div class="card">
-                            <img class="card-img-top img-fluid"
+                            <img class="card-img-top img-fluid d-block h-100"
                                  src="<?php bloginfo('template_url'); ?>/images/index-current-specials.jpg"
                                  alt="Card image cap">
                             <div class="card-body">
@@ -166,7 +166,7 @@ get_header(); ?>
 
             <div class="owl-carousel owl-theme">
                 <div class="card">
-                    <img class="card-img-top"
+                    <img class="card-img-top h-100"
                          src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Townhouse #25</h4>
@@ -181,7 +181,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top"
+                    <img class="card-img-top h-100"
                          src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Townhouse #25</h4>
@@ -196,7 +196,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top"
+                    <img class="card-img-top h-100"
                          src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Townhouse #25</h4>
@@ -211,7 +211,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top"
+                    <img class="card-img-top h-100"
                          src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Townhouse #25</h4>
@@ -226,7 +226,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top"
+                    <img class="card-img-top h-100"
                          src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Townhouse #25</h4>
@@ -241,7 +241,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top"
+                    <img class="card-img-top h-100"
                          src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Townhouse #25</h4>
