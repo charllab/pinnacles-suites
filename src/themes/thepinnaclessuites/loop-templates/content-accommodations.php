@@ -13,7 +13,8 @@
 
             <div class="entry-content">
 
-                Default page template
+	            Accom!
+                <?php the_content(); ?>
 
             </div><!-- .entry-content -->
 

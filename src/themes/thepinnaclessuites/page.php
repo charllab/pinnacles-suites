@@ -21,7 +21,15 @@ get_header();
 
             <?php while (have_posts()) : the_post(); ?>
 
-                <?php get_template_part('loop-templates/content', 'page'); ?>
+                <?php if (is_page(107)) { ?>
+
+                    <?php get_template_part('loop-templates/content', 'accommodations'); ?>
+
+	            <?php } else { ?>
+
+                    <?php get_template_part('loop-templates/content', 'page'); ?>
+
+	            <?php } ?>
 
             <?php endwhile; // end of the loop. ?>
 
