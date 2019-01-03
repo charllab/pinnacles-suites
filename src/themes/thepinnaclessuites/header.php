@@ -101,6 +101,8 @@
 
 
         </div><!-- /side-a -->
+        <div class="side-b">
+            <!-- /side-b opening tag for page content -->
 
 
 

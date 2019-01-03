@@ -7,7 +7,6 @@
 
 get_header(); ?>
 
-    <div class="side-b">
 
     <div id="home-page">
 
