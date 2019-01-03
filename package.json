@@ -1,5 +1,5 @@
 {
-    "name": "mywebsite",
+    "name": "thepinnaclessuites",
     "version": "1.0.0",
     "author": "Sproing Creative",
     "license": "MIT",
@@ -21,6 +21,7 @@
         "jssocials": "^1.4.0",
         "magnific-popup": "^1.1.0",
         "moment": "^2.15.2",
+        "natives": "^1.1.6",
         "node-sass": "^4.10.0",
         "owl.carousel": "^2.3.4",
         "parsleyjs": "^2.6.0",

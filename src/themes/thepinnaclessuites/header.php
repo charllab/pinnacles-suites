@@ -77,7 +77,7 @@
                     ]); ?>
 
                     <div class="text-center text-lg-left w-100 mt-3 mt-lg-5">
-                        <a href="#" class="btn btn-primary-menu mb-4 d-inline-flex">Check Availability</a>
+                        <a href="http://reservation.worldweb.com/Bookings-nr105/activity-edit.html?table=hotels&listing_id=1921&mode=command&command=bookingrequestform&hotel_id=1921" class="btn btn-primary-menu mb-4 d-inline-flex">Check Availability</a>
                     </div>
 
 
