@@ -11,7 +11,7 @@
 <footer>
 
     <section class="section">
-        <div class="container">
+        <div class="container padded-container">
             <div class="row">
                 <div class="col-sm-6 col-xxl-3 text-center text-sm-left">
                     <h4>Contact Us</h4>
@@ -72,7 +72,7 @@
 
 
     <section class="footer-bar">
-        <div class="container">
+        <div class="container padded-container">
             <div class="row py-3">
                 <div class="col-md-4 text-center text-md-left">
                     <p class="mb-0">&copy; <?php echo date("Y"); ?> The Pinnacles Suites</p>

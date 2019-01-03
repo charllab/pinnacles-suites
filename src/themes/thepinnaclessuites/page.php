@@ -13,30 +13,35 @@
 get_header();
 ?>
 
-<div class="wrapper section section--page" id="page-wrapper">
+    <section class="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-2 mb-lg-0">
+                    <p class="mb-0">The Pinnacles is available for individual ownership:<br>
+                        <a href="#" target="_blank">Summer 2018 Sale Pricing →</a></p>
+                </div>
+                <div
+                        class="col-lg-6 d-lg-flex align-self-lg-center justify-content-lg-end text-center topbar__telcta">
+                    <a href="tel:2503092565"><i class="fas fa-phone"></i> 1-250-542-4548</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="container" id="content" tabindex="-1">
 
-        <main class="site-main" id="main">
+    <?php while (have_posts()) : the_post(); ?>
 
-            <?php while (have_posts()) : the_post(); ?>
+        <?php if (is_page(107)) { ?>
 
-                <?php if (is_page(107)) { ?>
+            <?php get_template_part('loop-templates/content', 'accommodations'); ?>
 
-                    <?php get_template_part('loop-templates/content', 'accommodations'); ?>
+        <?php } else { ?>
 
-	            <?php } else { ?>
+            <?php get_template_part('loop-templates/content', 'page'); ?>
 
-                    <?php get_template_part('loop-templates/content', 'page'); ?>
+        <?php } ?>
 
-	            <?php } ?>
+    <?php endwhile; // end of the loop. ?>
 
-            <?php endwhile; // end of the loop. ?>
-
-        </main><!-- #main -->
-
-    </div><!-- Container end -->
-
-</div><!-- Wrapper end -->
 
 <?php get_footer(); ?>

@@ -11,7 +11,7 @@ get_header(); ?>
     <div id="home-page">
 
         <section class="topbar">
-            <div class="container">
+            <div class="container padded-container">
                 <div class="row">
                     <div class="col-lg-6 mb-2 mb-lg-0">
                         <p class="mb-0">The Pinnacles is available for individual ownership:<br>
@@ -26,7 +26,7 @@ get_header(); ?>
         </section>
 
         <section class="home-intro-cta">
-            <div class="container position-relative">
+            <div class="container padded-container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-lg-7 text-center">
                         <a href="#" class="btn btn-secondary-vid mb-5">Watch Video</a>
@@ -68,7 +68,7 @@ get_header(); ?>
         </section>
 
         <section class="section home-newsletter-cta position-relative">
-            <div class="container">
+            <div class="container padded-container">
 
                 <div class="hone-newsletter-bgsplit d-flex">
                     <div class="img-clipblock img-clip-1"></div>
@@ -98,7 +98,7 @@ get_header(); ?>
         </section>
 
         <section class="section pb-xl-0">
-            <div class="container">
+            <div class="container padded-container">
 
                 <div class="row">
                     <div class="col-md-8 offset-md-2 col-xl-5 offset-xl-1">
@@ -118,7 +118,7 @@ get_header(); ?>
         </section>
 
         <section class="section mb-3">
-            <div class="container">
+            <div class="container padded-container">
 
                 <div class="row">
 
@@ -145,7 +145,7 @@ get_header(); ?>
         <section class="accommodation-bg">
 
             <section>
-                <div class="container">
+                <div class="container padded-container">
 
                     <div class="row">
                         <div class="col-10 offset-1 col-xl-5 offset-md-1">
@@ -258,7 +258,7 @@ get_header(); ?>
 
         <section class="section">
 
-            <div class="container mb-5 instagram-intro">
+            <div class="container padded-container mb-5 instagram-intro">
                 <div class="row">
                     <div class="col-md-10 offset-md-1 d-flex">
                         <div class="mr-3">
