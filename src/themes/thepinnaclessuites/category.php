@@ -4,8 +4,6 @@
 $category = get_queried_object();
 ?>
 
-	<div class="side-b">
-
 		<p>Category: <?php single_cat_title(); ?></p>
 
         <?php
@@ -22,7 +20,5 @@ $category = get_queried_object();
             <?php the_title(); ?><br />
         <?php endwhile;
         wp_reset_postdata(); ?>
-
-	</div><!-- #home-page -->
 
 <?php get_footer();
