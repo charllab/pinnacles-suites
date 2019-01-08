@@ -8,7 +8,7 @@ $category = get_queried_object();
 
         <?php
         $the_query = new WP_Query([
-            'post_type' => 'accomadation',
+            'post_type' => 'accommodation',
             'cat' => $category->term_id,
             'posts_per_page' => -1,
             'orderby' => 'title',

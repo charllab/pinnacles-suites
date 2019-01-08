@@ -176,15 +176,18 @@ body {
 
 .accommodation-deck {
 
-    overflow-y: hidden;
-    padding-bottom: 2.5rem;
+    @include media-breakpoint-up(lg) {
 
-    .card {
-        min-width: 360px;
-        width: 360px;
+        overflow-y: hidden;
+        padding-bottom: 2.5rem;
 
-        .card-body {
-            padding-bottom: 2.5rem;
+        .card {
+            min-width: 360px;
+            width: 360px;
+
+            .card-body {
+                padding-bottom: 2.5rem;
+            }
         }
     }
 }
@@ -281,5 +284,18 @@ button.owl-prev {
         margin-right: .166666667rem;
         color: #343434;
         font-weight: 700;
+    }
+}
+.accommodationTables {
+
+    table {
+        tr {
+            font-size: .777777778rem;
+            margin-bottom: 1rem;
+
+        }
+    }
+    .td-w-40 {
+        width: 40%;
     }
 }
