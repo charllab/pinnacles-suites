@@ -5,17 +5,19 @@
 <?php the_field('size'); ?>
 
     <section>
-        <div class="container">
-            <div class="row">
-                <?php
-                if (function_exists('yoast_breadcrumb')) {
-                    yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-                }
-                ?>
+        <div class="container padded-container my-4">
+            <div class="row no-gutters">
+                <div class="col-12 mb-3">
+                    <?php
+                    if (function_exists('yoast_breadcrumb')) {
+                        yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+                    }
+                    ?>
+                </div>
             </div><!-- row -->
             <div class="row no-gutters">
-                <div class="col-lg-6 col-xl-5 p-lg-5 py-5">
-                    <h2>Townhouse #24</h2>
+                <div class="col-lg-7 p-y-5 pr-5">
+                    <h2><?php the_title(); ?></h2>
                     <h4>Where do you want to end your day at Silver Star?</h4>
                     <p>Pinnacles Slopeside Townhouse 24 gives you everything you need to make the most of your stay: a
                         kitchen like the one you’re used to, with plenty of counter space and sleek stainless steel
@@ -60,7 +62,7 @@
                 </div><!-- col -->
 
 
-                <div class="col-lg-6 col-xl-7">
+                <div class="col-lg-5">
                     <div class="row no-gutters">
 
                         <div class="order-3 order-lg-2 d-flex flex-wrap no-gutters mb-4">
@@ -203,6 +205,66 @@
             </div><!-- row no-gutters-->
         </div><!-- container -->
     </section>
+
+
+    <section class="accommodation-bg">
+
+        <div class="container category-page pb-5">
+            <div class="row no-gutters justify-content-start">
+
+
+
+
+                    <div class="col-12 col-md-6 col-xxl-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top h-100"
+                                 src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">View Other Pinnacle Slopeside Suites</h4>
+                                <p class="card-text">Nestled into the hillside between the Alpine Meadows and Summit lifts, the Pinnacles Slopeside wing of our hotel was aptly named when it opened. Since then, the Pinnacles have become the kind of townhouses Silver Star devotees try to keep a secret.</p>
+                                <a href="<?php bloginfo('url')?>/accommodations/pinnacles-slopeside-townhomes" class="btn btn-primary-arr">View Details</a>
+                            </div>
+                        </div>
+                    </div><!-- col -->
+
+                <!-- repeats -->
+
+                <div class="col-12 col-md-6 col-xxl-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top h-100"
+                             src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Upsize to West Wing Townhome-Style Suites</h4>
+                            <p class="card-text">Nestled into the hillside between the Alpine Meadows and Summit lifts, the Pinnacles Slopeside wing of our hotel was aptly named when it opened. Since then, the Pinnacles have become the kind of townhouses Silver Star devotees try to keep a secret.</p>
+                            <a href="<?php bloginfo('url')?>/accommodations/pinnacles-slopeside-townhomes" class="btn btn-primary-arr">View Details</a>
+                        </div>
+                    </div>
+                </div><!-- col -->
+
+                <div class="col-12 col-md-6 col-xxl-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top h-100"
+                             src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Downsize to Central Lodge</h4>
+                            <p class="card-text">Nestled into the hillside between the Alpine Meadows and Summit lifts, the Pinnacles Slopeside wing of our hotel was aptly named when it opened. Since then, the Pinnacles have become the kind of townhouses Silver Star devotees try to keep a secret.</p>
+                            <a href="<?php bloginfo('url')?>/accommodations/pinnacles-slopeside-townhomes" class="btn btn-primary-arr">View Details</a>
+                        </div>
+                    </div>
+                </div><!-- col -->
+
+
+
+
+            </div><!-- row -->
+        </div><!-- container -->
+    </section>
+
+
+
+
+
+
 
     <section class="accommodation-bg">
 

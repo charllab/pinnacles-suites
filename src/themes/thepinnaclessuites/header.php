@@ -102,6 +102,21 @@
 
         </div><!-- /side-a -->
         <div class="side-b">
+
+            <section class="topbar">
+                <div class="container padded-container">
+                    <div class="row">
+                        <div class="col-lg-6 mb-2 mb-lg-0">
+                            <p class="mb-0">The Pinnacles is available for individual ownership:<br>
+                                <a href="#" target="_blank">Summer 2018 Sale Pricing →</a></p>
+                        </div>
+                        <div
+                                class="col-lg-6 d-lg-flex align-self-lg-center justify-content-lg-end text-center topbar__telcta">
+                            <a href="tel:2503092565"><i class="fas fa-phone"></i> 1-250-542-4548</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- /side-b opening tag for page content -->
 
 

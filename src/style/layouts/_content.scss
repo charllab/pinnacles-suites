@@ -299,3 +299,11 @@ button.owl-prev {
         width: 40%;
     }
 }
+.category-page {
+    .card {
+        @include media-breakpoint-down(sm) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
