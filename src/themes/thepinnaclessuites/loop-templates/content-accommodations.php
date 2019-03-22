@@ -7,54 +7,52 @@
 
 ?>
 
-<section class="content">
+<section class="content pb-3">
     <div class="container padded-container" id="post-<?php the_ID(); ?>">
 
         <div class="row justify-content-center">
-            <div class="col-md-8 col-xl-12 mt-5 mt-lg-6">
+            <div class="col-md-8 col-xl-12 mt-4">
                 <?php
                 if (function_exists('yoast_breadcrumb')) {
                     yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
                 }
                 ?>
-            </div><!-- row -->
 
+                <h1 class="page-title"><?php the_title(); ?></h1>
+            </div><!-- row -->
+        </div>
+
+            <?php
+            $cat_args = [
+                'orderby' => 'name',
+                'order' => 'ASC'
+            ];
+
+            $categories = get_categories($cat_args);
+            $rowCount = 0;
+
+            foreach ($categories as $category) {
+                $image_id = get_field('featured_image', 'term_' . $category->term_taxonomy_id);
+                $attachment = wp_get_attachment_image_src($image_id, 'square-lg');
+                $isEven = $rowCount++ % 2 == 1;
+                ?>
             <div class="row mb-3 mb-xl-6 justify-content-around">
-                <div class="col-md-8 col-xl-5">
-                    <img src="https://via.placeholder.com/571" alt=""
-                         class="img-fluid mx-auto d-block mb-5 mb-xl-0">
+                <div class="col-md-8 col-xl-5 <?php echo($isEven ? 'justify-content-xl-end order-xl-1' : ''); ?>">
+                    <img class="img-fluid w-100 d-block mb-5 mb-xl-0"
+                         src="<?php echo $attachment[0]; ?>"
+                         alt="<?php bloginfo('name'); ?> - <?php echo $category->name ?>">
                 </div>
                 <div class="col-md-8 col-xl-5 flex-column align-self-lg-center">
-                    <h2>Pinnacles Slopeside</h2>
-                    <p>Nestled into the hillside between the Alpine Meadows and Summit lifts, the Pinnacles Slopeside wing of our hotel was aptly named when it opened. Since then, the Pinnacles have become the kind of townhouses Silver Star devotees try to keep a&nbsp;secret.</p>
-                    <a href="<?php bloginfo('url')?>/accommodations/pinnacles-slopeside-townhomes" class="btn btn-outline-primary d-block mb-5 mb-xl-0 d-xl-inline">View Townhouses</a>
+                    <h2><?php echo $category->name ?></h2>
+                    <?php echo category_description($category->term_taxonomy_id); ?>
+                    <a href="<?php echo get_category_link($category->term_taxonomy_id); ?>"
+                       class="btn btn-outline-primary d-block mt-2 mb-5 mb-xl-0 d-xl-inline-block">View All</a>
                 </div>
             </div><!-- row -->
 
-            <div class="row mb-3 mb-xl-6 justify-content-around">
-
-                <div class="col-md-8 col-xl-5 justify-content-xl-end order-xl-1">
-                    <img src="https://via.placeholder.com/571" alt=""
-                         class="img-fluid mx-auto d-block mb-5 mb-xl-0">
-                </div>
-                <div class="col-md-8 col-xl-5 flex-xl-column align-self-lg-center">
-                    <h2>Central Lodge</h2>
-                    <p>The central portion of the building was the original Silver Star Day Lodge. Each of the twelve suites has its own unique floor plan and character. Many of the two, three and four bedroom suites highlight the building’s heavy beam construction. And kids love the unique sleeping lofts tucked into corners of several of the suites. Most units have private hot tubs and barbecues on their&nbsp;sundecks.</p>
-                    <a href="<?php bloginfo('url')?>/accommodations/central-lodge-suites" class="btn btn-outline-primary d-block mb-5 mb-xl-0 d-xl-inline">View Suites</a>
-                </div>
-            </div><!-- row -->
-
-            <div class="row mb-3 mb-xl-6 justify-content-around">
-                <div class="col-md-8 col-xl-5">
-                    <img src="https://via.placeholder.com/571" alt=""
-                         class="img-fluid mx-auto d-block mb-5 mb-xl-0">
-                </div>
-                <div class="col-md-8 col-xl-5 flex-column align-self-lg-center">
-                    <h2>West Wing</h2>
-                    <p>The West Wing consists of two, four-bedroom deluxe townhome style suites. Each unit boasts two master bedrooms with ensuite washrooms plus private hot tub on the&nbsp;sundeck.</p>
-                    <a href="<?php bloginfo('url')?>/accommodations/west-wing-townhomes" class="btn btn-outline-primary d-block mb-5 mb-xl-0 d-xl-inline">View Suites</a>
-                </div>
-            </div><!-- row -->
+            <?php
+            }
+            ?>
 
         </div><!-- container -->
 </section><!-- /page content -->

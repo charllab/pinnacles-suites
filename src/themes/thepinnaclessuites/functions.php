@@ -41,6 +41,17 @@ add_filter('gform_init_scripts_footer', '__return_true');
 
 add_filter('gform_confirmation_anchor', '__return_false');
 
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page([
+        'page_title' => 'Theme Options',
+        'menu_title' => 'Theme Options',
+        'menu_slug' => 'theme-options',
+        'capability' => 'edit_posts',
+        'position' => 80,
+        'redirect' => false
+    ]);
+}
+
 /* Child Theme */
 
 add_action('after_setup_theme', 'custom_after_setup_theme', 11);
@@ -61,6 +72,8 @@ function custom_after_setup_theme()
     register_nav_menus([
         'primary' => 'Primary Menu'
     ]);
+
+    add_image_size('square-lg', '600', '600', true);
 }
 
 // Add TinyMCE style formats.
@@ -112,4 +125,31 @@ function custom_tiny_mce_before_init($settings)
 
     $settings['style_formats'] = json_encode($style_formats);
     return $settings;
+}
+
+add_filter('wpseo_breadcrumb_links', 'wpseo_breadcrumb_add_woo_shop_link');
+function wpseo_breadcrumb_add_woo_shop_link($links)
+{
+    if (is_archive()) {
+        $breadcrumb[] = [
+            'url' => get_bloginfo('url') . '/accommodations',
+            'text' => 'Accommodations',
+        ];
+        array_splice($links, 1, -2, $breadcrumb);
+    } else if (is_single()) {
+        $categories = get_the_category();
+
+        $breadcrumb[] = [
+            'url' => get_bloginfo('url') . '/accommodations',
+            'text' => 'Accommodations',
+        ];
+
+        $breadcrumb[] = [
+            'url' => esc_url(get_category_link($categories[0]->term_id)),
+            'text' => esc_html($categories[0]->name),
+        ];
+
+        array_splice($links, 1, -2, $breadcrumb);
+    }
+    return $links;
 }

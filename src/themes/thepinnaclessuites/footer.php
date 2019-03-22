@@ -32,22 +32,27 @@
                     <h4>Navigation</h4>
                     <ul class="list-unstyled mb-0">
                         <li><a href="<?php bloginfo('url'); ?>/your-stay">Your Stay</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/amenities">Amenities</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/faq">FAQ</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/your-stay/amenities">Amenities</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/your-stay/frequently-asked-questions">FAQ</a></li>
                         <li><a href="<?php bloginfo('url'); ?>/special-offers">Special Offers</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/our-story">Our Story</a></li>
                         <li><a href="<?php bloginfo('url'); ?>/policies">Policies</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/history">History</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/contact-and-locations">Contact & Location</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/about-us/our-story">Our Story</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/about-us/history">History</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/about-us/contact">Contact Us</a></li>
+                        <li>
+                            <a target="_blank" href="https://secure.webrez.com/Bookings-cr/login-owner.html?hotel_id=1921&mode=unitowner">
+                                Unit Owner Login &nbsp;<i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-xxl-3 text-center text-sm-left">
                     <h4>Accommodations</h4>
                     <ul class="list-unstyled">
-                        <li><a href="<?php bloginfo('url'); ?>/pinnacles-slopeside-townhouses">Pinnacles Slopeside
+                        <li><a href="<?php bloginfo('url'); ?>/accommodations/pinnacles-slopeside-townhomes">Pinnacles Slopeside
                                 Townhouses</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/central-lodge-suites">Central Lodge Suites</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/west-wing-townhouses">West Wing Townhouses</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/accommodations/central-lodge-suites">Central Lodge Suites</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/accommodations/west-wing-townhomes">West Wing Townhouses</a></li>
                     </ul>
                     <a href="https://www.tripadvisor.com/Hotel_Review-g1973875-d4744981-Reviews-The_Pinnacles_Suite_Hotel-Silver_Star_Okanagan_Valley_British_Columbia.html"
                        target="_blank"><img
@@ -58,13 +63,7 @@
                     <h4>The Pinnacles Suites Newsletter</h4>
                     <p>Stay up-to-date on the latest seasonal promotions and other news going on up at The Pinnacles and
                         Silver&nbsp;Star&nbsp;Mountain.</p>
-                    <form>
-                        <div class="form-row mb-3">
-                            <input type="text" class="form-control mb-2 text-center" placeholder="Your Email" aria-label="Your Email"
-                                   aria-describedby="newsletter-sign-up">
-                            <button class="btn btn-secondary-arr w-100" type="button">Subscribe</button>
-                        </div>
-                    </form>
+	                <a href="https://pinnacles.us16.list-manage.com/subscribe/post?u=cd64218565c43e3ff41803bb1&amp;id=5bf112dd97" target="_blank" class="btn btn-secondary btn--icon">Subscribe <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>

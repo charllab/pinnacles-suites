@@ -114,3 +114,69 @@ input[type="text"] {
         position: absolute;
     }
 }
+
+#mc-embedded-subscribe-form {
+
+    .mc-field-group {
+        @extend .form-group;
+    }
+    .mc-field-group {
+        @extend .form-group;
+    }
+
+    input[type="email"], input[type="text"] {
+        @extend .form-control;
+        border: none;
+    }
+    input[type="email"], input[type="text"] {
+        @extend .form-control;
+        border: none;
+    }
+
+    input[type="submit"] {
+        @extend .btn;
+        @extend .btn-dark;
+        @extend .btn-lg;
+    }
+    input[type="submit"] {
+        @extend .btn;
+        @extend .btn-dark;
+        @extend .btn-lg;
+    }
+
+    select {
+        @extend .custom-select;
+        border: none;
+    }
+    select {
+        @extend .custom-select;
+        border: none;
+    }
+
+    .av-checkbox {
+        margin-right: .3rem;
+    }
+
+    .checkbox {
+        @extend .form-check;
+        @extend .form-check-inline;
+        .checkbox {
+            @extend .form-check;
+            @extend .form-check-inline;
+
+            input {
+                @extend .form-check-input;
+            }
+            input {
+                @extend .form-check-input;
+            }
+
+            span {
+                @extend .form-check-label;
+            }
+        }
+        span {
+            @extend .form-check-label;
+        }
+    }
+}

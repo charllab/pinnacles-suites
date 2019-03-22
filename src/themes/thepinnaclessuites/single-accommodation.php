@@ -1,270 +1,80 @@
 <?php get_header(); ?>
 
-<?php the_title(); ?>
+    <section class="content pb-3">
+        <div class="container padded-container" id="post-<?php the_ID(); ?>">
 
-<?php the_field('size'); ?>
-
-    <section>
-        <div class="container padded-container my-4">
-            <div class="row no-gutters">
-                <div class="col-12 mb-3">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-xl-12 mt-4">
                     <?php
                     if (function_exists('yoast_breadcrumb')) {
                         yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
                     }
                     ?>
-                </div>
-            </div><!-- row -->
-            <div class="row no-gutters">
-                <div class="col-lg-7 p-y-5 pr-5">
-                    <h2><?php the_title(); ?></h2>
-                    <h4>Where do you want to end your day at Silver Star?</h4>
-                    <p>Pinnacles Slopeside Townhouse 24 gives you everything you need to make the most of your stay: a
-                        kitchen like the one you’re used to, with plenty of counter space and sleek stainless steel
-                        appliances; well-appointed bedrooms; and a heated deck and hot tub for you to soak your muscles
-                        and admire the snow-capped pine trees.This elegant executive townhome also features a gas
-                        fireplace in the living room and breathtaking views of the Monashee Mountain Range from the
-                        light-filled dining&nbsp;area.</p>
-                    <h4>Extras you’ll love about Townhouse&nbsp;24:</h4>
-                    <ul>
-                        <li>Four cable flat-screen TV’s</li>
-                        <li>Boot room with heated tile floor</li>
-                        <li>Heated deck housing private BBQ and hot tub filled in the winter (for summer there is a fee
-                            to have the hot tub filled)
-                        </li>
-                    </ul>
-                    <h4>The Sleeping Arrangements</h4>
-                    <p>All three bedrooms are located on the upper floor along with a full bathroom and a stacked
-                        washer/dryer.</p>
-                    <h4>Master bedroom</h4>
-                    <ul>
-                        <li>King-size bed</li>
-                        <li>Queen sofa bed</li>
-                        <li>Expansive ensuite</li>
-                        <li>TV/DVD</li>
-                    </ul>
-                    <h4>Bedroom 2</h4>
-                    <ul>
-                        <li>Queen-size bed</li>
-                    </ul>
-                    <h4>Bedroom 3</h4>
-                    <ul>
-                        <li>Single + single bunk bed</li>
-                        <li>Queen + single bunk bed</li>
-                    </ul>
 
-                    <h4>Living room</h4>
-                    <ul>
-                        <li>Queen sofa bed</li>
-                    </ul>
-                    <p>So which room are you going to sleep in?</p>
-                    <a href="#" class="btn btn-primary-arr">Book This Townhouse</a>
-                </div><!-- col -->
+                    <a href="<?php the_field('booking_link'); ?>" target="_blank" class="btn btn-primary btn--arrow float-right">Book
+                        Now</a>
+                    <h1 class="page-title"><?php the_title(); ?></h1>
+                </div><!-- row -->
+            </div>
 
-
+            <div class="row justify-content-between">
                 <div class="col-lg-5">
-                    <div class="row no-gutters">
+                    <?php the_field('accommodation_content'); ?>
+                </div>
 
-                        <div class="order-3 order-lg-2 d-flex flex-wrap no-gutters mb-4">
-                            <div class="col-xxl-12">
-                                <img src="https://via.placeholder.com/825x550" alt=""
-                                     class="img-fluid d-block">
-                            </div>
-                            <div class="col-xxl-6">
-                                <img src="https://via.placeholder.com/825x550" alt=""
-                                     class="img-fluid d-block">
-                            </div>
-                            <div class="col-xxl-6">
-                                <img src="https://via.placeholder.com/825x550" alt=""
-                                     class="img-fluid d-block">
-                            </div>
-                            <div class="d-none d-xxl-block col-xxl-4">
-                                <img src="https://via.placeholder.com/825x550" alt=""
-                                     class="img-fluid d-block">
-                            </div>
-                            <div class="d-none d-xxl-block col-xxl-4">
-                                <img src="https://via.placeholder.com/825x550" alt=""
-                                     class="img-fluid d-block">
-                            </div>
-                            <div class="d-none d-xxl-block col-xxl-4">
-                                <img src="https://via.placeholder.com/825x550" alt=""
-                                     class="img-fluid d-block">
-                            </div>
-                        </div><!-- order -->
+                <div class="col-lg-6">
+                    <?php $images = get_field('accommodation_gallery'); ?>
 
-                        <div class="order-2 order-lg-3 d-flex flex-wrap w-100 accommodationTables mb-4">
+                    <div id="home-slideshow" class="carousel slide carousel-fade mb-5" data-ride="carousel">
+                        <ol class="carousel-indicators d-none d-lg-flex">
+                            <?php $index = 0; ?>
+                            <?php foreach ($images as $key => $image): ?>
+                                <li data-target="#home-slideshow" data-slide-to="<?php echo $index; ?>"
+                                    class="<?php echo($index == 0 ? 'active' : ''); ?>"></li>
+                                <?php $index++; ?>
+                            <?php endforeach; ?>
 
-                            <div class="row">
-                                <div class="col-xxl-6 mb-3">
-                                    <h4>Fast Facts</h4>
-                                    <table class="table table-striped table-sm">
-                                        <tr>
-                                            <td class="td-w-40">Size:</td>
-                                            <td><?php the_field('size'); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sleeps:</td>
-                                            <td>9 to 13</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bedrooms:</td>
-                                            <td>3</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lofts:</td>
-                                            <td>No</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bathrooms:</td>
-                                            <td>2.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Fireplace:</td>
-                                            <td>Yes - Gas</td>
-                                        </tr>
-                                        <tr>
-                                            <td>BBQ:</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Outside Deck:</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hot Tub:</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ski Locker:</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>View:</td>
-                                            <td>Silver Star Village and Monashee Mountain Range</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ski-in/Ski-out:</td>
-                                            <td>Ski Access to the Gondola & Comet Chairs, Alpine Meadows, Silver Queen &
-                                                the Village
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Internet:</td>
-                                            <td>WiFi</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Laundry:</td>
-                                            <td>In-suite washer/dryer</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garage:</td>
-                                            <td>Heated tandem two-car</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mud/Drying Room:</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                    </table>
-                                </div><!-- col -->
+                        </ol>
+                        <div class="carousel-inner">
+                            <?php $index = 0; ?>
+                            <?php foreach ($images as $key => $image): ?>
+                                <div class="carousel-item <?php echo($index == 0 ? 'active' : ''); ?>">
+                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                                </div>
+                                <?php $index++; ?>
+                            <?php endforeach; ?>
+                        </div>
 
-                                <div class="col-xxl-6">
-                                    <h4>Rates</h4>
-                                    <table class="table table-sm">
-                                        <tr>
-                                            <td scope="col">Nov 08 - Dec 20, 2018</td>
-                                            <td scope="col">Early Winter</td>
-                                            <td scopr="col">$579/night</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dec 21 - Jan 5, 2019</td>
-                                            <td>Holiday</td>
-                                            <td>$884/night</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jan 6 - Apr 7, 2019</td>
-                                            <td>Winter</td>
-                                            <td>$649/night</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jun 22 - Sept 16, 2018</td>
-                                            <td>Summer</td>
-                                            <td>$434/night</td>
-                                        </tr>
-                                    </table>
-                                </div><!-- col -->
+                        <a class="carousel-control-prev" href="#home-slideshow" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#home-slideshow" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
 
-                            </div><!-- row -->
+                    <h3>Rates</h3>
+                    <?php the_field('rate'); ?>
 
+                    <hr />
 
-                        </div><!-- order -->
-
-                    </div><!-- row -->
+                    <h3>Quick Facts</h3>
+                    <table class="table table-striped table-sm">
+                        <?php while (have_rows('facts')) : the_row(); ?>
+                            <tr>
+                                <td class="w-25"><?php the_sub_field('label'); ?></td>
+                                <td><?php the_sub_field('value'); ?></td>
+                            </tr>
+                        <?php endwhile; ?>
+                    </table>
 
                 </div><!-- col -->
 
             </div><!-- row no-gutters-->
         </div><!-- container -->
     </section>
-
-
-    <section class="accommodation-bg">
-
-        <div class="container category-page pb-5">
-            <div class="row no-gutters justify-content-start">
-
-
-
-
-                    <div class="col-12 col-md-6 col-xxl-4 mb-4">
-                        <div class="card">
-                            <img class="card-img-top h-100"
-                                 src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">View Other Pinnacle Slopeside Suites</h4>
-                                <p class="card-text">Nestled into the hillside between the Alpine Meadows and Summit lifts, the Pinnacles Slopeside wing of our hotel was aptly named when it opened. Since then, the Pinnacles have become the kind of townhouses Silver Star devotees try to keep a secret.</p>
-                                <a href="<?php bloginfo('url')?>/accommodations/pinnacles-slopeside-townhomes" class="btn btn-primary-arr">View Details</a>
-                            </div>
-                        </div>
-                    </div><!-- col -->
-
-                <!-- repeats -->
-
-                <div class="col-12 col-md-6 col-xxl-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top h-100"
-                             src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Upsize to West Wing Townhome-Style Suites</h4>
-                            <p class="card-text">Nestled into the hillside between the Alpine Meadows and Summit lifts, the Pinnacles Slopeside wing of our hotel was aptly named when it opened. Since then, the Pinnacles have become the kind of townhouses Silver Star devotees try to keep a secret.</p>
-                            <a href="<?php bloginfo('url')?>/accommodations/pinnacles-slopeside-townhomes" class="btn btn-primary-arr">View Details</a>
-                        </div>
-                    </div>
-                </div><!-- col -->
-
-                <div class="col-12 col-md-6 col-xxl-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top h-100"
-                             src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Downsize to Central Lodge</h4>
-                            <p class="card-text">Nestled into the hillside between the Alpine Meadows and Summit lifts, the Pinnacles Slopeside wing of our hotel was aptly named when it opened. Since then, the Pinnacles have become the kind of townhouses Silver Star devotees try to keep a secret.</p>
-                            <a href="<?php bloginfo('url')?>/accommodations/pinnacles-slopeside-townhomes" class="btn btn-primary-arr">View Details</a>
-                        </div>
-                    </div>
-                </div><!-- col -->
-
-
-
-
-            </div><!-- row -->
-        </div><!-- container -->
-    </section>
-
-
-
-
-
-
 
     <section class="accommodation-bg">
 
@@ -299,7 +109,7 @@
                     <li>Sleeps up to 17</li>
                     <li>Pinnacles Slopeside</li>
                 </ul>
-                <a href="#" class="btn btn-primary-arr">View Details</a>
+                <a href="#" class="btn btn-primary btn--arrow">View Details</a>
             </div>
         </div>
         <div class="card">
@@ -314,7 +124,7 @@
                     <li>Sleeps up to 17</li>
                     <li>Pinnacles Slopeside</li>
                 </ul>
-                <a href="#" class="btn btn-primary-arr">View Details</a>
+                <a href="#" class="btn btn-primary btn--arrow">View Details</a>
             </div>
         </div>
         <div class="card">
@@ -329,7 +139,7 @@
                     <li>Sleeps up to 17</li>
                     <li>Pinnacles Slopeside</li>
                 </ul>
-                <a href="#" class="btn btn-primary-arr">View Details</a>
+                <a href="#" class="btn btn-primary btn--arrow">View Details</a>
             </div>
         </div>
         <div class="card">
@@ -344,7 +154,7 @@
                     <li>Sleeps up to 17</li>
                     <li>Pinnacles Slopeside</li>
                 </ul>
-                <a href="#" class="btn btn-primary-arr">View Details</a>
+                <a href="#" class="btn btn-primary btn--arrow">View Details</a>
             </div>
         </div>
         <div class="card">
@@ -359,7 +169,7 @@
                     <li>Sleeps up to 17</li>
                     <li>Pinnacles Slopeside</li>
                 </ul>
-                <a href="#" class="btn btn-primary-arr">View Details</a>
+                <a href="#" class="btn btn-primary btn--arrow">View Details</a>
             </div>
         </div>
         <div class="card">
@@ -374,7 +184,7 @@
                     <li>Sleeps up to 17</li>
                     <li>Pinnacles Slopeside</li>
                 </ul>
-                <a href="#" class="btn btn-primary-arr">View Details</a>
+                <a href="#" class="btn btn-primary btn--arrow">View Details</a>
             </div>
         </div>
     </div>

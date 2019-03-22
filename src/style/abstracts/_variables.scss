@@ -10,17 +10,15 @@ $enable-print-styles: false;
 
 // Colors
 $primary: #205B94;
+$primary-dark: #3d455a;
 $secondary: #E3931D;
 $site-yellow: #FED667;
 $primary-light: #959595;
 $mark-bg: #ffd61e;
 $selection-color: #d9edf7;
-$headers: #404040;
-$body-color: #848484;
+$body-color: #666;
 $input-focus-border-color: $primary;
-$top-bar-color: #3d455a;
 $gray-brand: #f7f6f6;
-$nav: #5D5D5D;
 $active: #2F2F2F;
 
 // Misc
@@ -45,11 +43,10 @@ $font-family-base: $font-family-sans-serif;
 $headings-font-family: $font-family-serif;
 
 $headings-margin-bottom: $spacer;
-$line-height-base: 1.44444;
 
 // Text
 
-$paragraph-margin-bottom: 1.75rem;
+$paragraph-margin-bottom: 1rem;
 
 // Figure
 $figure-margin: $spacer * 2.5;
@@ -65,7 +62,7 @@ $grid-breakpoints: (
     md: 768px,
     lg: 992px,
     xl: 1200px,
-    xxl: 1300px
+    xxl: 1600px
 );
 
 // Containers
@@ -74,7 +71,7 @@ $container-max-widths: (
     md: 720px,
     lg: 960px,
     xl: 1140px,
-    xxl: 1360px
+    xxl: 1660px
 );
 
 $navbar-nav-link-padding-x: 2.8rem;

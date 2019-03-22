@@ -2,69 +2,25 @@
 footer {
     background: #6c6b6b url('../images/footer-bg.jpg');
     background-size: cover;
+    font-size: 90%;
 
     h4 {
         color: #EFEFEF;
     }
 
     p,
-    a {
-        font-size: .888888889rem;
+    a:not(.btn) {
+
         color: rgba(#EFEFEF, .75);
     }
 
-    a {
-        &:link,
-        &:visited,
-        &:hover,
-        &:active {
-            font-size: .888888889rem;
-            color: rgba(#EFEFEF, .75);
-        }
-    }
-
     .footer-bar {
+        font-size: 90%;
         background-color: rgba(#363635, .98);
         color: #848484;
 
         a {
             color: inherit;
-        }
-    }
-}
-
-#mc-embedded-subscribe-form {
-
-    .mc-field-group {
-        @extend .form-group;
-    }
-
-    input[type="email"], input[type="text"] {
-        @extend .form-control;
-        border: none;
-    }
-
-    input[type="submit"] {
-        @extend .btn;
-        @extend .btn-dark;
-        @extend .btn-lg;
-    }
-
-    select {
-        @extend .custom-select;
-        border: none;
-    }
-
-    .checkbox {
-        @extend .form-check;
-        @extend .form-check-inline;
-
-        input {
-            @extend .form-check-input;
-        }
-
-        span {
-            @extend .form-check-label;
         }
     }
 }

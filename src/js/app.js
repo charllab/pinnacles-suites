@@ -1,34 +1,61 @@
 jQuery(function () {
 
-    // owl carousel
+    jQuery('.navbar-nav > li > a').on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        window.location.href = jQuery(this).attr('href');
+    });
+
+    jQuery('.js-video-modal').magnificPopup({
+        type: 'iframe',
+        iframe: {
+            patterns: {
+                youtube: {
+                    index: 'youtube.com/',
+                    id: 'v=',
+                    src: '//www.youtube.com/embed/%id%?autoplay=1'
+                }
+            }
+        }
+    });
+
+    jQuery('.blocks-gallery-item a').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
+
+    // Accommodation carousel
     jQuery('.owl-carousel').owlCarousel({
         navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
         dots: false,
-        loop:true,
-        responsiveClass:true,
+        loop: true,
+        responsiveClass: true,
         navContainer: '#customNav',
         margin: 15,
         autoplay: true,
-        responsive:{
-            0:{
-                items:1,
-                nav:true,
-                loop:true
+        responsive: {
+            0: {
+                items: 1,
+                nav: true,
+                loop: true
             },
-            700:{
-                items:2,
-                nav:true,
-                loop:true
+            700: {
+                items: 2,
+                nav: true,
+                loop: true
             },
-            1200:{
-                items:3,
-                nav:true,
-                loop:true
+            1200: {
+                items: 3,
+                nav: true,
+                loop: true
             },
-            1600:{
-                items:4,
-                nav:true,
-                loop:true
+            1600: {
+                items: 4,
+                nav: true,
+                loop: true
             }
 
         }

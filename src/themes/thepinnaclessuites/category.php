@@ -12,51 +12,58 @@ $the_query = new WP_Query([
     'order' => 'ASC'
 ]);
 ?>
+    <section class="content pb-3">
+        <div class="container padded-container" id="post-<?php the_ID(); ?>">
 
-    <section>
-
-        <div class="container pt-5">
             <div class="row justify-content-center">
-                <div class="col-12 mb-3">
+                <div class="col-md-8 col-xl-12 mt-4">
                     <?php
-                    if ( function_exists('yoast_breadcrumb') ) {
-                        yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+                    if (function_exists('yoast_breadcrumb')) {
+                        yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
                     }
                     ?>
-                    <h2 class="text-center text-sm-left"><?php single_cat_title(); ?></h2>
-                </div><!-- col -->
-            </div><!-- row -->
-        </div><!-- container -->
 
-        <div class="container category-page pb-5">
-            <div class="row no-gutters justify-content-start">
+                    <h1 class="page-title"><?php single_cat_title(); ?></h1>
+                </div><!-- row -->
+            </div>
 
-                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+            <div class="mb-5"><?php the_field('long_description', $category); ?></div>
+
+            <div class="container category-page pb-5">
+                <div class="row no-gutters justify-content-start">
+
+                    <?php while ($the_query->have_posts()) : $the_query->the_post();
+
+                        $image = get_field('accommodation_featured_images');
+                        $categories = get_the_category();
+                        ?>
 
 
-                    <div class="col-12 col-md-6 col-xxl-4 mb-4">
-                        <div class="card">
-                            <img class="card-img-top h-100"
-                                 src="<?php bloginfo('template_url'); ?>/images/index-townhouse-card-img-1.jpg" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title"><?php the_title(); ?><br/></h4>
-                                <p class="card-text"><?php the_field('excerpt'); ?></p>
-                                <ul class="list-unstyled">
-                                    <li>Sleeps up to 17</li>
-                                    <li>Pinnacles Slopeside</li>
-                                </ul>
-                                <a href="<?php bloginfo('url')?>/accommodation/townhouse-24" class="btn btn-primary-arr">View Details</a>
+                        <div class="col-12 col-md-6 col-xxl-4 mb-4">
+                            <div class="card">
+                                <img class="card-img-top h-100"
+                                     src="<?php echo $image['url']; ?>"
+                                     alt="<?php bloginfo('name'); ?> - <?php the_title(); ?>">
+                                <div class="card-body">
+                                    <h4 class="card-title"><?php the_title(); ?><br/></h4>
+                                    <p class="card-text"><?php the_field('excerpt'); ?></p>
+                                    <ul class="list-unstyled">
+                                        <li>Sleeps <?php the_field('sleeps'); ?></li>
+                                        <li><?php echo '<a href="'.esc_url(get_category_link($categories[0]->term_id)).'">'.esc_html($categories[0]->name).'</a>'; ?></li>
+                                    </ul>
+                                    <a href="<?php bloginfo('url') ?>/accommodation/townhouse-24" class="btn btn-primary btn--arrow">View
+                                        Details</a>
+                                </div>
                             </div>
-                        </div>
-                    </div><!-- col -->
+                        </div><!-- col -->
 
 
-                <?php endwhile;
-                wp_reset_postdata(); ?>
+                    <?php endwhile;
+                    wp_reset_postdata(); ?>
 
 
-            </div><!-- row -->
-        </div><!-- container -->
+                </div><!-- row -->
+            </div><!-- container -->
     </section>
 
 <?php get_footer();

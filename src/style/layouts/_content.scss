@@ -1,6 +1,7 @@
 html,
 body {
     min-width: 320px;
+
     #home-page {
         @include media-breakpoint-down(sm) {
             text-align: center;
@@ -10,6 +11,8 @@ body {
 
 .side-a {
     background: white url('../images/menu-bg@2x.jpg') no-repeat 0 0;
+    z-index: 20;
+
     @include media-breakpoint-up(lg) {
         width: 300px;
         height: 100%;
@@ -19,6 +22,8 @@ body {
 }
 
 .side-b {
+    z-index: 10;
+
     @include media-breakpoint-up(lg) {
         margin-left: 300px;
     }
@@ -29,6 +34,11 @@ body {
     padding-right: 3rem;
 }
 
+.content {
+    background: url('../images/bg-accommodation.jpg') no-repeat 0 0;
+    background-size: 100%;
+    background-attachment: fixed;
+}
 
 #page {
     position: relative;
@@ -68,20 +78,24 @@ body {
 
 .home-newsletter-cta {
     overflow: hidden;
+    color: rgba($white, .7);
 }
 
 .home-intro-cta {
     background: #fff url('../images/index-hero-bg.jpg') no-repeat top center;
-    padding-top: 4rem;
+    padding-top: 6rem;
+
     @include media-breakpoint-up(md) {
         margin-bottom: 2.5rem;
     }
+
     @include media-breakpoint-up(xl) {
         background-color: #505d71;
         background-size: cover;
         margin-bottom: 14rem;
         padding-bottom: 14rem;
     }
+
     @include media-breakpoint-up(xxl) {
         padding-bottom: 20rem;
     }
@@ -149,7 +163,7 @@ body {
 .card {
     border-radius: 0;
     border: none;
-    box-shadow: 0px 6px 70px -15px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.25);
     margin-left: 25px;
     margin-right: 25px;
 
@@ -163,15 +177,15 @@ body {
 }
 
 .card-body {
-    padding: 1.8rem 2.25rem;
+    padding: 1.75rem;
 }
 
 .accommodation-bg {
-    padding-top: 4.333333333rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     border-top: 8px solid #c6c6c6;
-    background: url('../images/bg-accommodation.png') no-repeat 0 0;
-    -webkit-background-size: cover;
-    background-size: cover;
+    background: url('../images/bg-accommodation.jpg') no-repeat 0 0;
+    background-size: 100%;
 }
 
 .accommodation-deck {
@@ -200,33 +214,19 @@ body {
     a {
         color: $body-color;
     }
+
     @include media-breakpoint-down(sm) {
         font-size: .85rem;
     }
 }
-.instagram-intro {
- i {
-     color: #201b34;
- }
-}
-.instagram-gallery {
-    max-width: 1540px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 
-    img {
-        margin: 0 .5rem 1rem;
-        width: 40%;
-        height: 100%;
-        @include media-breakpoint-up(sm) {
-            width: 20%;
-        }
-        @media (min-width: 1409.98px) {
-            width: 15%;
-        }
+.sb_instagram_header {
+    display: none;
+}
+
+.instagram-intro {
+    i {
+        color: #201b34;
     }
 }
 
@@ -235,13 +235,17 @@ body {
 
 }
 
+.owl-carousel .owl-stage-outer {
+    padding: 2rem 0 4rem 0;
+}
+
 .owl-nav button {
     line-height: 40px;
     height: 39.5px;
     text-align: center;
     display: inline-block;
     width: 50px;
-    color: #979797;
+    color: $white;
     background-color: #606060;
     border: none;
 
@@ -279,13 +283,20 @@ button.owl-prev {
 
 #breadcrumbs {
     text-transform: uppercase;
-    font-size: .777777778rem;
+    font-size: 80%;
+    margin-bottom: 1rem;
+
     a {
-        margin-right: .166666667rem;
+        margin-right: .3rem;
         color: #343434;
         font-weight: 700;
     }
+
+    .breadcrumb_last {
+        margin-left: .2rem;
+    }
 }
+
 .accommodationTables {
 
     table {
@@ -295,10 +306,12 @@ button.owl-prev {
 
         }
     }
+
     .td-w-40 {
         width: 40%;
     }
 }
+
 .category-page {
     .card {
         @include media-breakpoint-down(sm) {
@@ -306,4 +319,20 @@ button.owl-prev {
             margin-right: 0;
         }
     }
+}
+
+/* Modal */
+
+.mfp-iframe-holder .mfp-content {
+    @include media-breakpoint-up(lg) {
+        max-width: 80%;
+    }
+}
+
+/* Gutenberg */
+
+.wp-block-embed {
+    @extend .embed-responsive;
+    @extend .embed-responsive-16by9;
+    margin-bottom: $paragraph-margin-bottom;
 }

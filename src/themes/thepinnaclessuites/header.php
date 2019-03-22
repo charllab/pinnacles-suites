@@ -28,13 +28,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/solid.css"
-          integrity="sha384-aj0h5DVQ8jfwc8DA7JiM+Dysv7z+qYrFYZR+Qd/TwnmpDI6UaB3GJRRTdY8jYGS4" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/brands.css"
-          integrity="sha384-whKHCkwP9f4MyD1vda26+XRyEg2zkyZezur14Kxc784RxUU1E7HvWVYj9EoJnUV7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/fontawesome.css"
-          integrity="sha384-WK8BzK0mpgOdhCxq86nInFqSWLzR5UAsNg0MGX9aDaIIrFWQ38dGdhwnNCAoXFxL" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <?php wp_head(); ?>
 </head>
@@ -48,10 +42,16 @@
 
             <div class="text-sm-center mt-5 mb-4 mx-5 mx-ms-3 my-lg-4 mx-lg-0">
                 <a href="<?php bloginfo('url'); ?>" class="logo-h">
-                    <img src="<?php bloginfo('template_url'); ?>/images/tps-logo-vert@2x.png"
-                         alt="The Pinnacles Suite logo" class="img-fluid d-lg-none my-3 my-sm-0">
-                    <img src="<?php bloginfo('template_url'); ?>/images/tps-logo@2x.png" alt="The Pinnacles Suite logo"
-                         class="img-fluid d-none d-lg-block mx-auto">
+
+	                <img alt="<?php bloginfo('name'); ?>" class="img-fluid d-none d-lg-block mx-auto"
+	                     srcset="<?php bloginfo('template_url'); ?>/images/tps-logo.png 1x,
+                             <?php bloginfo('template_url'); ?>/images/tps-logo@2x.png 2x"
+	                     src="<?php bloginfo('template_url'); ?>/images/tps-logo.png">
+
+	                <img alt="<?php bloginfo('name'); ?>" class="img-fluid d-lg-none my-3 my-sm-0"
+	                     srcset="<?php bloginfo('template_url'); ?>/images/tps-logo.png 1x,
+                             <?php bloginfo('template_url'); ?>/images/tps-logo@2x.png 2x"
+	                     src="<?php bloginfo('template_url'); ?>/images/tps-logo.png">
                 </a>
             </div>
 
@@ -77,13 +77,12 @@
                     ]); ?>
 
                     <div class="text-center text-lg-left w-100 mt-3 mt-lg-5">
-                        <a href="http://reservation.worldweb.com/Bookings-nr105/activity-edit.html?table=hotels&listing_id=1921&mode=command&command=bookingrequestform&hotel_id=1921" class="btn btn-primary-menu mb-4 d-inline-flex">Check Availability</a>
+                        <a target="_blank" href="http://reservation.worldweb.com/Bookings-nr105/activity-edit.html?table=hotels&listing_id=1921&mode=command&command=bookingrequestform&hotel_id=1921" class="btn btn-primary btn--arrow mb-4 d-inline-block">Check Availability</a>
                     </div>
-
 
                     <div class="mt-lg-auto menu-socialmedia-wrapper w-100">
                         <ul class="list-unstyled mb-0 menu-socialmedia-items w-100">
-                            <li><a href="https://www.facebook.com/PinnaclesSuiteHotel" class="d-block"
+                            <li><a href="https://www.facebook.com/thepinnaclessuites/" class="d-block"
                                    target="_blank"><i class="fab fa-facebook-square"></i></a></li>
                             <li>
                                 <a href="https://www.tripadvisor.com/Hotel_Review-g1973875-d4744981-Reviews-The_Pinnacles_Suite_Hotel-Silver_Star_Okanagan_Valley_British_Columbia.html"
@@ -93,32 +92,24 @@
                         </ul>
                     </div>
 
-
                 </div><!-- navbar-collapse -->
-
 
             </nav>
 
 
         </div><!-- /side-a -->
+
         <div class="side-b">
 
             <section class="topbar">
                 <div class="container padded-container">
                     <div class="row">
                         <div class="col-lg-6 mb-2 mb-lg-0">
-                            <p class="mb-0">The Pinnacles is available for individual ownership:<br>
-                                <a href="#" target="_blank">Summer 2018 Sale Pricing →</a></p>
+                            <?php the_field('banner_text', 'options'); ?>
                         </div>
-                        <div
-                                class="col-lg-6 d-lg-flex align-self-lg-center justify-content-lg-end text-center topbar__telcta">
-                            <a href="tel:2503092565"><i class="fas fa-phone"></i> 1-250-542-4548</a>
+                        <div class="col-lg-6 d-lg-flex align-self-lg-center justify-content-lg-end text-center topbar__telcta">
+                            <a href="tel:2503092565"><i class="fas fa-phone mr-1"></i> 1-250-542-4548</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- /side-b opening tag for page content -->
-
-
-
-
