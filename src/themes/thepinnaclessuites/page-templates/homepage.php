@@ -12,7 +12,7 @@ get_header(); ?>
     <section class="home-intro-cta">
         <div class="container padded-container position-relative">
             <div class="row justify-content-center">
-                <div class="col-lg-7 text-center">
+                <div class="col-lg-10 col-xl-8 col-xxl-7 text-center">
                     <a href="https://www.youtube.com/watch?v=M0pPP-5OByY" class="btn btn-secondary btn--icon mb-5 js-video-modal">Watch
                         Video <i class="fas fa-play"></i></a>
                     <h1 class="text-white">Cozy Accommodations and Warm&nbsp;Hospitality</h1>
@@ -162,55 +162,23 @@ get_header(); ?>
 
     <section class="accommodation-bg">
 
-        <div class="row">
-            <div class="col-10 offset-1 col-xl-5 offset-md-1">
-                <h2>Featured Suites & Townhomes</h2>
-                <p class="mb-3">Our accommodations sleep up to 17 with the comforts of home and the service of a hotel.</p>
-            </div>
-            <div
-                class="col-10 offset-1 offset-xl-0 col-xl-4 mx-auto mr-xl-0 mb-5 mb-xl-0 d-flex align-items-start justify-content-around acc-controls">
-                <div class="acc-btn-set d-flex justify-content-between">
-                    <div id="customNav" class="owl-nav d-flex"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-10 offset-1 col-xl-5 offset-md-1">
+                    <h2>Featured Suites & Townhomes</h2>
+                    <p class="mb-3">Our accommodations sleep up to 17 with the comforts of home and the service of a hotel.</p>
                 </div>
-                <a href="<?php bloginfo('url'); ?>/accommodations" class="btn btn-primary">View All</a>
-            </div>
-
-        </div>
-
-        <div class="owl-carousel owl-theme">
-
-            <?php
-            $post_objects = get_field('featured_accommodations', 'option');
-
-            if ($post_objects): ?>
-                <?php foreach ($post_objects as $post): ?>
-                    <?php setup_postdata($post); ?>
-
-                    <?php
-                    $image = get_field('accommodation_featured_images');
-                    $categories = get_the_category();
-                    ?>
-
-                    <div class="card">
-                        <img class="card-img-top h-100"
-                             src="<?php echo $image['url']; ?>"
-                             alt="<?php bloginfo('name'); ?> - <?php the_title(); ?>">
-                        <div class="card-body">
-                            <h4 class="card-title"><?php the_title(); ?></h4>
-                            <p class="card-text"><?php the_field('excerpt'); ?></p>
-                            <ul class="list-unstyled">
-                                <li>Sleeps <?php the_field('sleeps'); ?></li>
-                                <li><?php echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>'; ?></li>
-                            </ul>
-                            <a href="<?php the_permalink(); ?>" class="btn btn-primary btn--arrow">View Details</a>
-                        </div>
+                <div
+                    class="col-10 offset-1 offset-xl-0 col-xl-4 mx-auto mr-xl-0 mb-5 mb-xl-0 d-flex align-items-start justify-content-around acc-controls">
+                    <div class="acc-btn-set d-flex justify-content-between">
+                        <div id="customNav" class="owl-nav d-flex"></div>
                     </div>
-
-                <?php endforeach; ?>
-                <?php wp_reset_postdata(); ?>
-            <?php endif;
-            ?>
+                    <a href="<?php bloginfo('url'); ?>/accommodations" class="btn btn-primary">View All</a>
+                </div>
+            </div>
         </div>
+
+        <?php get_template_part('includes/accom-carousel'); ?>
 
         <div class="container padded-container mb-5 instagram-intro">
             <div class="row">

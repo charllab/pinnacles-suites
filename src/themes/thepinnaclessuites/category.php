@@ -29,41 +29,39 @@ $the_query = new WP_Query([
 
             <div class="mb-5"><?php the_field('long_description', $category); ?></div>
 
-            <div class="container category-page pb-5">
-                <div class="row no-gutters justify-content-start">
+            <div class="row justify-content-start">
 
-                    <?php while ($the_query->have_posts()) : $the_query->the_post();
+                <?php while ($the_query->have_posts()) : $the_query->the_post();
 
-                        $image = get_field('accommodation_featured_images');
-                        $categories = get_the_category();
-                        ?>
+                    $image = get_field('accommodation_featured_images');
+                    $categories = get_the_category();
+                    ?>
 
 
-                        <div class="col-12 col-md-6 col-xxl-4 mb-4">
-                            <div class="card">
-                                <img class="card-img-top h-100"
-                                     src="<?php echo $image['url']; ?>"
-                                     alt="<?php bloginfo('name'); ?> - <?php the_title(); ?>">
-                                <div class="card-body">
-                                    <h4 class="card-title"><?php the_title(); ?><br/></h4>
-                                    <p class="card-text"><?php the_field('excerpt'); ?></p>
-                                    <ul class="list-unstyled">
-                                        <li>Sleeps <?php the_field('sleeps'); ?></li>
-                                        <li><?php echo '<a href="'.esc_url(get_category_link($categories[0]->term_id)).'">'.esc_html($categories[0]->name).'</a>'; ?></li>
-                                    </ul>
-                                    <a href="<?php bloginfo('url') ?>/accommodation/townhouse-24" class="btn btn-primary btn--arrow">View
-                                        Details</a>
-                                </div>
+                    <div class="col-12 col-md-6 col-xxl-4 mb-4">
+                        <div class="card h-100">
+                            <img class="card-img-top"
+                                 src="<?php echo $image['url']; ?>"
+                                 alt="<?php bloginfo('name'); ?> - <?php the_title(); ?>">
+                            <div class="card-body">
+                                <h4 class="card-title"><?php the_title(); ?><br/></h4>
+                                <p class="card-text"><?php the_field('excerpt'); ?></p>
+                                <ul class="list-unstyled">
+                                    <li>Sleeps <?php the_field('sleeps'); ?></li>
+                                    <li><?php echo '<a href="'.esc_url(get_category_link($categories[0]->term_id)).'">'.esc_html($categories[0]->name).'</a>'; ?></li>
+                                </ul>
+                                <a href="<?php the_permalink(); ?>" class="btn btn-primary btn--arrow mt-auto">
+                                    View Details
+                                </a>
                             </div>
-                        </div><!-- col -->
+                        </div>
+                    </div><!-- col -->
 
 
-                    <?php endwhile;
-                    wp_reset_postdata(); ?>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
 
-
-                </div><!-- row -->
-            </div><!-- container -->
+            </div><!-- row -->
     </section>
 
 <?php get_footer();

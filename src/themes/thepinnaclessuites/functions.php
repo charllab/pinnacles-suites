@@ -14,9 +14,9 @@ if (!function_exists('enqueue_scripts')) {
     {
         wp_enqueue_script('jquery', false, [], false, false);
 
-        wp_enqueue_style('style_file', get_stylesheet_directory_uri().'/style/style.css', [], '1.0.0');
-        wp_enqueue_script('header_js', get_stylesheet_directory_uri().'/js/header-bundle.js', null, '1.0.0', false);
-        wp_enqueue_script('footer_js', get_stylesheet_directory_uri().'/js/footer-bundle.js', null, '1.0.0', true);
+        wp_enqueue_style('style_file', get_stylesheet_directory_uri().'/style/style.css', [], '1.0.1');
+        wp_enqueue_script('header_js', get_stylesheet_directory_uri().'/js/header-bundle.js', null, '1.0.1', false);
+        wp_enqueue_script('footer_js', get_stylesheet_directory_uri().'/js/footer-bundle.js', null, '1.0.1', true);
     }
 }
 
@@ -74,6 +74,11 @@ function custom_after_setup_theme()
     ]);
 
     add_image_size('square-lg', '600', '600', true);
+    add_image_size('banner-lg', '900', '400', true);
+
+    add_theme_support( 'editor-styles' );
+
+    add_editor_style( 'style-editor.css' );
 }
 
 // Add TinyMCE style formats.

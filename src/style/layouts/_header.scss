@@ -50,8 +50,14 @@
     flex-direction: column;
 }
 
-@media screen and (min-width: 992px) and (max-height: 768px) {
-    .logo-h {
+.logo-h {
+    @include media-breakpoint-down(md) {
+        img {
+            height: 42px;
+        }
+    }
+
+    @media screen and (min-width: 992px) and (max-height: 800px) {
         width: 200px;
         display: block;
         margin-left: auto;
@@ -63,7 +69,6 @@
 
     .menu-item {
         @extend .flex-fill;
-        text-align: center;
         color: $gray-800;
 
         @include media-breakpoint-up(lg) {
@@ -72,7 +77,7 @@
     }
 
     .menu-item .fa-angle-right {
-        float: right;
+        margin-left: .5rem;
     }
 
     & > .menu-item:hover:before,
@@ -142,10 +147,10 @@
 .menu-switch {
     position: absolute;
     right: 1rem;
-    top: -134px;
+    top: 1.35rem;
 
-    @include media-breakpoint-up(sm) {
-        top: -122px;
+    .navbar-toggler {
+        background: $primary-dark;
     }
 }
 

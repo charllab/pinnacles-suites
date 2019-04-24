@@ -38,9 +38,9 @@
 <div id="page">
 
     <div class="sides-wrapper">
-        <div class="side-a d-flex flex-column">
+        <div class="side-a d-flex justify-content-between flex-column">
 
-            <div class="text-sm-center mt-5 mb-4 mx-5 mx-ms-3 my-lg-4 mx-lg-0">
+            <div class="my-0 my-md-3 px-2 px-lg-0">
                 <a href="<?php bloginfo('url'); ?>" class="logo-h">
 
 	                <img alt="<?php bloginfo('name'); ?>" class="img-fluid d-none d-lg-block mx-auto"
@@ -49,20 +49,18 @@
 	                     src="<?php bloginfo('template_url'); ?>/images/tps-logo.png">
 
 	                <img alt="<?php bloginfo('name'); ?>" class="img-fluid d-lg-none my-3 my-sm-0"
-	                     srcset="<?php bloginfo('template_url'); ?>/images/tps-logo.png 1x,
-                             <?php bloginfo('template_url'); ?>/images/tps-logo@2x.png 2x"
-	                     src="<?php bloginfo('template_url'); ?>/images/tps-logo.png">
+	                     src="<?php bloginfo('template_url'); ?>/images/tps-logo-vert-alt.svg">
                 </a>
             </div>
 
-            <nav class="navbar navbar-expand-lg p-0 navbar-light c-flex c-flex-colmn c-height-100">
+            <div class="text-right d-block d-lg-none menu-switch">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container"
+                        aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
 
-                <div class="text-right d-block d-lg-none menu-switch">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container"
-                            aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+            <nav class="navbar navbar-expand-lg p-0 navbar-light c-flex c-flex-colmn c-height-100">
 
                 <div id="navbar-container" class="navbar-collapse collapse c-flex c-flex-colmn w-100">
 
@@ -76,8 +74,8 @@
                         'walker' => new understrap_WP_Bootstrap_Navwalker(),
                     ]); ?>
 
-                    <div class="text-center text-lg-left w-100 mt-3 mt-lg-5">
-                        <a target="_blank" href="http://reservation.worldweb.com/Bookings-nr105/activity-edit.html?table=hotels&listing_id=1921&mode=command&command=bookingrequestform&hotel_id=1921" class="btn btn-primary btn--arrow mb-4 d-inline-block">Check Availability</a>
+                    <div class="w-100 mt-3 mt-lg-4 w-100">
+                        <a target="_blank" href="<?php the_field('booking_link', 'options'); ?>" class="btn btn-primary btn--arrow mb-4 d-inline-block">Check Availability</a>
                     </div>
 
                     <div class="mt-lg-auto menu-socialmedia-wrapper w-100">
@@ -104,10 +102,10 @@
             <section class="topbar">
                 <div class="container padded-container">
                     <div class="row">
-                        <div class="col-lg-6 mb-2 mb-lg-0">
+                        <div class="col-xl-6 mb-2 mb-lg-0 text-center text-xl-left">
                             <?php the_field('banner_text', 'options'); ?>
                         </div>
-                        <div class="col-lg-6 d-lg-flex align-self-lg-center justify-content-lg-end text-center topbar__telcta">
+                        <div class="col-xl-6 mt-2 mt-xl-0 align-self-lg-center justify-content-lg-end topbar__telcta text-center text-xl-right">
                             <a href="tel:2503092565"><i class="fas fa-phone mr-1"></i> 1-250-542-4548</a>
                         </div>
                     </div>

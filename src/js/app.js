@@ -34,7 +34,7 @@ jQuery(function () {
         loop: true,
         responsiveClass: true,
         navContainer: '#customNav',
-        margin: 15,
+        margin: 30,
         autoplay: true,
         responsive: {
             0: {

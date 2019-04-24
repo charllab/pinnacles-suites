@@ -28,19 +28,21 @@ get_header(); ?>
 
                             while ( have_rows('offers') ) : the_row();
                                 $image_id = get_sub_field('featured_image');
-                                $image_src = wp_get_attachment_image_src($image_id, 'full');
+                                $image_src = wp_get_attachment_image_src($image_id, 'banner-lg');
                             ?>
 
-                                <div class="card mx-0 mb-5">
-                                    <img class="card-img-top h-100"
-                                         src="<?php echo $image_src[0]; ?>"
-                                         alt="<?php bloginfo('name'); ?> - <?php the_title(); ?>">
-                                    <div class="card-body">
-                                        <h2 class="card-title mt-0"><?php the_sub_field('title'); ?></h2>
-                                        <p class="card-text"><?php the_sub_field('description'); ?></p>
-                                        <a target="_blank" href="http://reservation.worldweb.com/Bookings-nr105/activity-edit.html?table=hotels&listing_id=1921&mode=command&command=bookingrequestform&hotel_id=1921" class="btn btn-primary btn--arrow">Book Now</a>
+                                <?php if (get_sub_field('display_special')) { ?>
+                                    <div class="card mx-0 mb-5">
+                                        <img class="card-img-top h-100"
+                                             src="<?php echo $image_src[0]; ?>"
+                                             alt="<?php bloginfo('name'); ?> - <?php the_title(); ?>">
+                                        <div class="card-body">
+                                            <h2 class="card-title mt-0"><?php the_sub_field('title'); ?></h2>
+                                            <p class="card-text"><?php the_sub_field('description'); ?></p>
+                                            <a target="_blank" href="<?php the_field('booking_link', 'options'); ?>" class="btn btn-primary btn--arrow">Book Now</a>
+                                        </div>
                                     </div>
-                                </div>
+                                <?php } ?>
 
                             <?php endwhile;
 

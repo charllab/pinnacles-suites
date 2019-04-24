@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+<?php
+$book_url = get_field('booking_link') ?: get_field('booking_link', 'options');
+?>
+
     <section class="content pb-3">
         <div class="container padded-container" id="post-<?php the_ID(); ?>">
 
@@ -11,7 +15,7 @@
                     }
                     ?>
 
-                    <a href="<?php the_field('booking_link'); ?>" target="_blank" class="btn btn-primary btn--arrow float-right">
+                    <a href="<?php echo $book_url; ?>" target="_blank" class="btn btn-primary btn--arrow float-right">
                         Book Now
                     </a>
                     <h1 class="page-title"><?php the_title(); ?></h1>
@@ -21,7 +25,7 @@
             <div class="row justify-content-between">
                 <div class="col-lg-5">
                     <?php the_field('accommodation_content'); ?>
-                    <a href="<?php the_field('booking_link'); ?>" target="_blank" class="btn btn-primary btn--arrow mt-4">
+                    <a href="<?php echo $book_url; ?>" target="_blank" class="btn btn-primary btn--arrow mt-4">
                         Book Now
                     </a>
                 </div>
@@ -43,7 +47,7 @@
                             <?php $index = 0; ?>
                             <?php foreach ($images as $key => $image): ?>
                                 <div class="carousel-item <?php echo($index == 0 ? 'active' : ''); ?>">
-                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-fluid"/>
                                 </div>
                                 <?php $index++; ?>
                             <?php endforeach; ?>
@@ -59,10 +63,11 @@
                         </a>
                     </div>
 
-                    <h3>Rates</h3>
-                    <?php the_field('rate'); ?>
-
-                    <hr/>
+                    <?php if (get_field('rate')) { ?>
+                        <h3>Rates</h3>
+                        <?php the_field('rate'); ?>
+                        <hr/>
+                    <?php } ?>
 
                     <h3>Quick Facts</h3>
                     <table class="table table-striped table-sm">
@@ -80,7 +85,7 @@
         </div><!-- container -->
     </section>
 
-    <section class="accommodation-bg mt-5 pb-0">
+    <section class="accommodation-bg pb-0">
 
         <section>
             <div class="container padded-container">
@@ -100,39 +105,7 @@
                 </div>
         </section>
 
-        <div class="owl-carousel owl-theme">
-            <?php
-            $post_objects = get_field('featured_accommodations', 'option');
-
-            if ($post_objects): ?>
-                <?php foreach ($post_objects as $post): ?>
-                    <?php setup_postdata($post); ?>
-
-                    <?php
-                    $image = get_field('accommodation_featured_images');
-                    $categories = get_the_category();
-                    ?>
-
-                    <div class="card">
-                        <img class="card-img-top h-100"
-                             src="<?php echo $image['url']; ?>"
-                             alt="<?php bloginfo('name'); ?> - <?php the_title(); ?>">
-                        <div class="card-body">
-                            <h4 class="card-title"><?php the_title(); ?></h4>
-                            <p class="card-text"><?php the_field('excerpt'); ?></p>
-                            <ul class="list-unstyled">
-                                <li>Sleeps <?php the_field('sleeps'); ?></li>
-                                <li><?php echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>'; ?></li>
-                            </ul>
-                            <a href="<?php the_permalink(); ?>" class="btn btn-primary btn--arrow">View Details</a>
-                        </div>
-                    </div>
-
-                <?php endforeach; ?>
-                <?php wp_reset_postdata(); ?>
-            <?php endif;
-            ?>
-        </div>
+        <?php get_template_part('includes/accom-carousel'); ?>
     </section>
 
 

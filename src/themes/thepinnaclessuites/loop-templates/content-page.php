@@ -20,20 +20,6 @@
 
 	            <div class="wp-content-body">
                     <?php the_content(); ?>
-
-                    <?php
-                    if( have_rows('offers') ):
-
-                        while ( have_rows('offers') ) : the_row(); ?>
-
-                            <h2><?php the_sub_field('title'); ?></h2>
-                            <?php the_sub_field('description'); ?>
-	                        <a target="_blank" href="http://reservation.worldweb.com/Bookings-nr105/activity-edit.html?table=hotels&listing_id=1921&mode=command&command=bookingrequestform&hotel_id=1921" class="btn btn-primary btn--arrow">Book Now</a>
-
-                        <?php endwhile;
-
-                    endif;
-                    ?>
 	            </div>
             </div><!-- col -->
             <div class="col-xl-4">

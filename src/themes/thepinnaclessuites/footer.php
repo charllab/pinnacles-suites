@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-sm-6 col-xxl-3 text-center text-sm-left">
                     <h4>Navigation</h4>
-                    <ul class="list-unstyled mb-0">
+                    <ul class="list-unstyled">
                         <li><a href="<?php bloginfo('url'); ?>/your-stay">Your Stay</a></li>
                         <li><a href="<?php bloginfo('url'); ?>/your-stay/amenities">Amenities</a></li>
                         <li><a href="<?php bloginfo('url'); ?>/your-stay/frequently-asked-questions">FAQ</a></li>
@@ -73,10 +73,10 @@
     <section class="footer-bar">
         <div class="container padded-container">
             <div class="row py-3">
-                <div class="col-md-4 text-center text-md-left">
-                    <p class="mb-0">&copy; <?php echo date("Y"); ?> The Pinnacles Suites</p>
+                <div class="col-lg-4 text-center text-lg-left">
+                    <p class="mb-2 mb-lg-0">&copy; <?php echo date("Y"); ?> The Pinnacles Suites</p>
                 </div>
-                <div class="col-md-8 text-center text-md-right">
+                <div class="col-lg-8 text-center text-lg-right">
                     <p class="mb-0">Designed, Developed and Hosted by <a href="https://sproing.ca/" target="_blank">Sproing
                             Creative</a></p>
                 </div>
