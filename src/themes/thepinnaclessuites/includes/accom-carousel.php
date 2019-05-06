@@ -23,7 +23,7 @@
                         <li>Sleeps <?php the_field('sleeps'); ?></li>
                         <li><?php echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>'; ?></li>
                     </ul>
-                    <a href="<?php the_permalink(); ?>" class="btn btn-primary btn--arrow mt-auto">View Details</a>
+                    <a href="<?php the_permalink(); ?>" class="btn btn-primary btn--arrow mr-auto mt-auto">View Details</a>
                 </div>
             </div>
 

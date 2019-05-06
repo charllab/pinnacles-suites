@@ -39,6 +39,8 @@
                         <li><a href="<?php bloginfo('url'); ?>/about-us/our-story">Our Story</a></li>
                         <li><a href="<?php bloginfo('url'); ?>/about-us/history">History</a></li>
                         <li><a href="<?php bloginfo('url'); ?>/about-us/contact">Contact Us</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/terms-and-conditions">Terms and Conditions</a></li>
                         <li>
                             <a target="_blank" href="https://secure.webrez.com/Bookings-cr/login-owner.html?hotel_id=1921&mode=unitowner">
                                 Unit Owner Login &nbsp;<i class="fas fa-external-link-alt"></i>

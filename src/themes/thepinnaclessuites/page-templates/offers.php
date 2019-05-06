@@ -39,7 +39,7 @@ get_header(); ?>
                                         <div class="card-body">
                                             <h2 class="card-title mt-0"><?php the_sub_field('title'); ?></h2>
                                             <p class="card-text"><?php the_sub_field('description'); ?></p>
-                                            <a target="_blank" href="<?php the_field('booking_link', 'options'); ?>" class="btn btn-primary btn--arrow">Book Now</a>
+                                            <a target="_blank" href="<?php the_field('booking_link', 'options'); ?>" class="btn btn-primary mr-auto btn--arrow">Book Now</a>
                                         </div>
                                     </div>
                                 <?php } ?>

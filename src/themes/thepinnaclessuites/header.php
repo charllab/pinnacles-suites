@@ -30,6 +30,17 @@
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2271929-29"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-2271929-29');
+    </script>
+
+
     <?php wp_head(); ?>
 </head>
 
@@ -106,7 +117,7 @@
                             <?php the_field('banner_text', 'options'); ?>
                         </div>
                         <div class="col-xl-6 mt-2 mt-xl-0 align-self-lg-center justify-content-lg-end topbar__telcta text-center text-xl-right">
-                            <a href="tel:2503092565"><i class="fas fa-phone mr-1"></i> 1-250-542-4548</a>
+                            <a href="tel:12505424548"><i class="fas fa-phone mr-1"></i> 1-250-542-4548</a>
                         </div>
                     </div>
                 </div>
