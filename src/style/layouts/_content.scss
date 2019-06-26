@@ -175,6 +175,15 @@ body {
     border: none;
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
 
+    .btn {
+        position: absolute;
+        bottom: 2rem;
+    }
+
+    .card-body {
+        padding-bottom: 5rem;
+    }
+
     img {
         border-bottom: 8px solid $site-yellow;
     }
@@ -289,8 +298,6 @@ button.owl-prev {
 
 // Owl flexbox tweak
 .card-body {
-    display: flex;
-    flex-direction: column;
     height: 100%;
 }
 
