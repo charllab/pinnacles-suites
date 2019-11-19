@@ -42,7 +42,7 @@
                         <li><a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a></li>
                         <li><a href="<?php bloginfo('url'); ?>/terms-and-conditions">Terms and Conditions</a></li>
                         <li>
-                            <a target="_blank" href="https://secure.webrez.com/Bookings-cr/login-owner.html?hotel_id=1921&mode=unitowner">
+                            <a target="_blank" href="https://secure.webrez.com/hotel/1921/unitowner">
                                 Unit Owner Login &nbsp;<i class="fas fa-external-link-alt"></i>
                             </a>
                         </li>
