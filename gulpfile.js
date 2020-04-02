@@ -31,6 +31,8 @@ const dotenv = require('dotenv').config({
     path: process.env.PWD + '/.env'
 });
 
+const publicDir = 'public_html/';
+
 
 /* -------------------------------------------------------------------------------------------------
 Theme Name
@@ -83,14 +85,14 @@ Installation Tasks
 gulp.task('default');
 
 gulp.task('cleanup', () => {
-	del(['public/wordpress/**']);
+	del([publicDir + 'wordpress/**']);
 });
 
 gulp.task('download-wordpress', () => {
 	remoteSrc(['latest.zip'], {
 		base: 'https://wordpress.org/'
 	})
-		.pipe(gulp.dest('public/'));
+		.pipe(gulp.dest(publicDir + ''));
 });
 
 gulp.task('setup', [
@@ -99,15 +101,15 @@ gulp.task('setup', [
 ]);
 
 gulp.task('unzip-wordpress', () => {
-	gulp.src('public/latest.zip')
+	gulp.src(publicDir + 'latest.zip')
 		.pipe(unzip())
-		.pipe(gulp.dest('public/'))
+		.pipe(gulp.dest(publicDir + ''))
 });
 
 gulp.task('copy-config', () => {
 	gulp.src('wp-config.php')
 		.pipe(inject.after('define(\'DB_COLLATE\', \'\');', '\ndefine(\'DISABLE_WP_CRON\', true);'))
-		.pipe(gulp.dest('public/wordpress'))
+		.pipe(gulp.dest(publicDir + 'wordpress'))
 		.on('end', () => {
 				gutil.beep();
 				gutil.log(devServerReady);
@@ -115,7 +117,7 @@ gulp.task('copy-config', () => {
 });
 
 gulp.task('disable-cron', () => {
-	fs.readFile('public/wordpress/wp-config.php', (err, data) => {
+	fs.readFile(publicDir + 'wordpress/wp-config.php', (err, data) => {
 		if (err) {
 			gutil.log(wpFy + ' - ' + errorMsg + ' Something went wrong, WP_CRON was not disabled!');
 			process.exit(1);
@@ -123,9 +125,9 @@ gulp.task('disable-cron', () => {
 		if (data.indexOf('DISABLE_WP_CRON') >= 0) {
 			gutil.log('WP_CRON is already disabled!');
 		} else {
-			gulp.src('public/wordpress/wp-config.php')
+			gulp.src(publicDir + 'wordpress/wp-config.php')
 				.pipe(inject.after('define(\'DB_COLLATE\', \'\');', '\ndefine(\'DISABLE_WP_CRON\', true);'))
-				.pipe(gulp.dest('public/wordpress'));
+				.pipe(gulp.dest(publicDir + 'wordpress'));
 		}
 	});
 });
@@ -146,7 +148,7 @@ gulp.task('dev', [
 
 ], () => {
 	connect.server({
-		base: 'public/wordpress',
+		base: publicDir + 'wordpress',
 		port: '80'
 	}, () => {
         browserSync({
@@ -157,23 +159,23 @@ gulp.task('dev', [
 });
 
 gulp.task('copy-theme-dev', () => {
-	if (!fs.existsSync('./public')) {
+	if (!fs.existsSync(publicDir)) {
 		gutil.log(buildNotFound);
 		process.exit(1);
 	} else {
 		gulp.src('src/themes/**')
-			.pipe(gulp.dest('public/wordpress/wp-content/themes/'));
+			.pipe(gulp.dest(publicDir + 'wordpress/wp-content/themes/'));
 	}
 });
 
 gulp.task('copy-images-dev', () => {
     gulp.src('src/images/**')
-        .pipe(gulp.dest('public/wordpress/wp-content/themes/' + themeName + '/images'))
+        .pipe(gulp.dest(publicDir + 'wordpress/wp-content/themes/' + themeName + '/images'))
 });
 
 gulp.task('copy-fonts-dev', () => {
 	gulp.src('src/fonts/**')
-		.pipe(gulp.dest('public/wordpress/wp-content/themes/' + themeName + '/fonts'))
+		.pipe(gulp.dest(publicDir + 'wordpress/wp-content/themes/' + themeName + '/fonts'))
 });
 
 gulp.task('style-dev', () => {
@@ -183,7 +185,7 @@ gulp.task('style-dev', () => {
         .pipe(sass().on("error", sass.logError))
         .pipe(postcss(pluginsProd))
         .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest("public/wordpress/wp-content/themes/" + themeName + "/style"))
+        .pipe(gulp.dest(publicDir + "wordpress/wp-content/themes/" + themeName + "/style"))
         .pipe(browserSync.stream({ match: "**/*.css" }));
 });
 
@@ -193,7 +195,7 @@ gulp.task('header-scripts-dev', () => {
 		.pipe(sourcemaps.init())
 		.pipe(concat('header-bundle.js'))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('public/wordpress/wp-content/themes/' + themeName + '/js'));
+		.pipe(gulp.dest(publicDir + 'wordpress/wp-content/themes/' + themeName + '/js'));
 });
 
 gulp.task('footer-scripts-dev', () => {
@@ -202,12 +204,12 @@ gulp.task('footer-scripts-dev', () => {
 		.pipe(sourcemaps.init())
 		.pipe(concat('footer-bundle.js'))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('public/wordpress/wp-content/themes/' + themeName + '/js'));
+		.pipe(gulp.dest(publicDir + 'wordpress/wp-content/themes/' + themeName + '/js'));
 });
 
 gulp.task('plugins-dev', () => {
 	return gulp.src('src/plugins/**')
-		.pipe(gulp.dest('public/wordpress/wp-content/plugins'));
+		.pipe(gulp.dest(publicDir + 'wordpress/wp-content/plugins'));
 });
 
 gulp.task('reload-js', ['footer-scripts-dev', 'header-scripts-dev'], (done) => {
@@ -242,7 +244,7 @@ gulp.task('watch', () => {
     gulp.watch(['src/images/**'], ['reload-images']);
 	gulp.watch(['src/themes/**'], ['reload-theme']);
 	gulp.watch(['src/plugins/**'], ['reload-plugins']);
-	gulp.watch('public/wordpress/wp-config*.php', (event) => {
+	gulp.watch(publicDir + 'wordpress/wp-config*.php', (event) => {
 		if (event.type === 'added') {
 			gulp.start('disable-cron');
 		}

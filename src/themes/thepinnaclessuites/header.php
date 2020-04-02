@@ -28,13 +28,18 @@
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:400,700" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2271929-29"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-2271929-29');
@@ -54,13 +59,13 @@
             <div class="my-0 my-md-3 px-2 px-lg-0">
                 <a href="<?php bloginfo('url'); ?>" class="logo-h">
 
-	                <img alt="<?php bloginfo('name'); ?>" class="img-fluid d-none d-lg-block mx-auto"
-	                     srcset="<?php bloginfo('template_url'); ?>/images/tps-logo.png 1x,
+                    <img alt="<?php bloginfo('name'); ?>" class="img-fluid d-none d-lg-block mx-auto"
+                         srcset="<?php bloginfo('template_url'); ?>/images/tps-logo.png 1x,
                              <?php bloginfo('template_url'); ?>/images/tps-logo@2x.png 2x"
-	                     src="<?php bloginfo('template_url'); ?>/images/tps-logo.png">
+                         src="<?php bloginfo('template_url'); ?>/images/tps-logo.png">
 
-	                <img alt="<?php bloginfo('name'); ?>" class="img-fluid d-lg-none my-3 my-sm-0"
-	                     src="<?php bloginfo('template_url'); ?>/images/tps-logo-vert-alt.svg">
+                    <img alt="<?php bloginfo('name'); ?>" class="img-fluid d-lg-none my-3 my-sm-0"
+                         src="<?php bloginfo('template_url'); ?>/images/tps-logo-vert-alt.svg">
                 </a>
             </div>
 
@@ -86,7 +91,8 @@
                     ]); ?>
 
                     <div class="w-100 mt-3 mt-lg-4 w-100">
-                        <a target="_blank" href="<?php the_field('booking_link', 'options'); ?>" class="btn btn-primary btn--arrow mb-4 d-inline-block">Check Availability</a>
+                        <a target="_blank" href="<?php the_field('booking_link', 'options'); ?>"
+                           class="btn btn-primary btn--arrow mb-4 d-inline-block">Check Availability</a>
                     </div>
 
                     <div class="mt-lg-auto menu-socialmedia-wrapper w-100">
@@ -110,13 +116,26 @@
 
         <div class="side-b">
 
+            <div class="bg-secondary pt-3 pb-2">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8 col-xl-7 text-center">
+                            <h3 class="text-white font-weight-bold">For Winter are you looking to stay for 7 nights or more?</h3>
+                            <p class="text-white"><span class="font-weight-bold">You qualify for Pinnacles STAR Value Week
+                                    where the 7th night is FREE!</span> <span class="small"> Our West Wing Suites, as well as our Slopeside and Peaks Townhomes have
+                                a 7 night minimum night stay in January and February 2021 until October&nbsp;1,&nbsp;2020.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <section class="topbar">
                 <div class="container padded-container">
                     <div class="row">
                         <div class="col-xl-6 mb-2 mb-lg-0 text-center text-xl-left">
                             <?php the_field('banner_text', 'options'); ?>
                         </div>
-                        <div class="col-xl-6 mt-2 mt-xl-0 align-self-lg-center justify-content-lg-end topbar__telcta text-center text-xl-right">
+                        <div
+                            class="col-xl-6 mt-2 mt-xl-0 align-self-lg-center justify-content-lg-end topbar__telcta text-center text-xl-right">
                             <a href="tel:12505424548"><i class="fas fa-phone mr-1"></i> 1-250-542-4548</a>
                         </div>
                     </div>
