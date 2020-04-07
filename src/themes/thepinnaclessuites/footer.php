@@ -49,13 +49,16 @@
                     </ul>
                 </div>
                 <div class="col-sm-6 col-xxl-3 text-center text-sm-left">
+
                     <h4>Accommodations</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="<?php bloginfo('url'); ?>/accommodations/pinnacles-slopeside-townhomes">Pinnacles Slopeside
-                                Townhouses</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/accommodations/central-lodge-suites">Central Lodge Suites</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/accommodations/west-wing-townhomes">West Wing Townhouses</a></li>
-                    </ul>
+                    <?php wp_nav_menu([
+                        'theme_location' => 'secondary',
+                        'menu_class' => 'list-unstyled',
+                        'fallback_cb' => '',
+                        'menu_id' => 'accommodations-menu',
+                        'walker' => new understrap_WP_Bootstrap_Navwalker(),
+                    ]); ?>
+
                     <a href="https://www.tripadvisor.com/Hotel_Review-g1973875-d4744981-Reviews-The_Pinnacles_Suite_Hotel-Silver_Star_Okanagan_Valley_British_Columbia.html"
                        target="_blank"><img
                             src="<?php bloginfo('template_url'); ?>/images/footertrip-advisor-logo@2x.png" alt=""

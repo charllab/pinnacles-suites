@@ -70,7 +70,8 @@ function custom_after_setup_theme()
     ]);
 
     register_nav_menus([
-        'primary' => 'Primary Menu'
+        'primary' => 'Primary Menu',
+        'secondary' => 'Accommodations Menu'
     ]);
 
     add_image_size('square-lg', '600', '600', true);

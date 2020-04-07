@@ -205,3 +205,18 @@
         }
     }
 }
+
+#accommodations-menu {
+
+    margin-bottom: 2rem;
+
+    li {
+        padding: 0;
+    }
+    a.nav-link {
+        padding: 0;
+        color: rgba(239, 239, 239, .75) !important;
+        margin-bottom: .3rem;
+    }
+
+}
