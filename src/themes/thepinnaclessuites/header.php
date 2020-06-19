@@ -56,7 +56,7 @@
     <div class="sides-wrapper">
         <div class="side-a d-flex justify-content-between flex-column">
 
-            <div class="my-0 my-md-3 px-2 px-lg-0">
+            <div class="my-0 my-md-3 p-3 px-lg-0">
                 <a href="<?php bloginfo('url'); ?>" class="logo-h">
 
                     <img alt="<?php bloginfo('name'); ?>" class="img-fluid d-none d-lg-block mx-auto"
@@ -84,15 +84,17 @@
                         'theme_location' => 'primary',
                         'container_class' => 'w-100',
                         'container_id' => '',
-                        'menu_class' => 'navbar-nav d-flex w-100 flex-column',
+                        'menu_class' => 'navbar-nav d-flex w-100 flex-column mb-4 mb-lg-0',
                         'fallback_cb' => '',
                         'menu_id' => 'main-menu',
                         'walker' => new understrap_WP_Bootstrap_Navwalker(),
                     ]); ?>
 
-                    <div class="w-100 mt-3 mt-lg-4 w-100">
+                    <div class="w-100 mt-3 mt-lg-4 d-none d-lg-block">
                         <a target="_blank" href="<?php the_field('booking_link', 'options'); ?>"
-                           class="btn btn-primary btn--arrow mb-4 d-inline-block">Check Availability</a>
+                           class="btn btn-primary btn--arrow mb-2 d-inline-block">Check Availability</a>
+                        <a target="_blank" href="<?php the_field('policies_link', 'options'); ?>"
+                           class="btn btn-secondary btn--arrow mb-4 d-inline-block">Covid-19 Policies</a>
                     </div>
 
                     <div class="mt-lg-auto menu-socialmedia-wrapper w-100">
@@ -116,18 +118,25 @@
 
         <div class="side-b">
 
-            <div class="bg-secondary pt-3 pb-2">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-lg-8 col-xl-7 text-center">
-                            <h3 class="text-white font-weight-bold">For Winter are you looking to stay for 7 nights or more?</h3>
-                            <p class="text-white"><span class="font-weight-bold">You qualify for Pinnacles STAR Value Week
-                                    where the 7th night is FREE!</span> <span class="small"> Our West Wing Suites, as well as our Slopeside and Peaks Townhomes have
-                                a 7 night minimum night stay in January and February 2021 until October&nbsp;1,&nbsp;2020.</span></p>
+            <div class="header-btns-m d-block d-lg-none">
+                <a target="_blank" href="<?php the_field('booking_link', 'options'); ?>"
+                   class="btn btn-primary btn--arrow">Check Availability</a>
+                <a target="_blank" href="<?php the_field('policies_link', 'options'); ?>"
+                   class="btn btn-secondary btn--arrow">Covid-19 Policies</a>
+            </div>
+
+            <?php if (get_field('display_the_alert_banner', 'options')) : ?>
+                <div class="alert-banner bg-primary pt-3 pb-2">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <?php the_field('alert_banner_text', 'options'); ?>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
+
             <section class="topbar">
                 <div class="container padded-container">
                     <div class="row">

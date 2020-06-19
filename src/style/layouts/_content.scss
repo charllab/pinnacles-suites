@@ -187,6 +187,13 @@ body {
     img {
         border-bottom: 8px solid $site-yellow;
     }
+
+    @include media-breakpoint-down(lg) {
+        .btn {
+            left: 2rem;
+            right: 2rem;
+        }
+    }
 }
 
 .card-img-top {
@@ -256,6 +263,10 @@ body {
 
 .owl-carousel .owl-stage-outer {
     padding: 2rem 1.5rem 3rem 1.5rem;
+
+    @include media-breakpoint-down(sm) {
+        padding: 0;
+    }
 }
 
 .owl-nav button {
