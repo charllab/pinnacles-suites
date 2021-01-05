@@ -137,6 +137,20 @@
                 </div>
             <?php endif; ?>
 
+            <?php
+            $custom_banner = get_field('new_custom_banner', 'options');
+            if ($custom_banner['display_custom_banner']) : ?>
+                <div class="alert-banner pt-3 custom-banner" style="display:flex;justify-content:center;align-items:center;background-color: <?php echo $custom_banner['banner_background_color']; ?>">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <?php echo $custom_banner['banner_text']; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+
             <section class="topbar">
                 <div class="container padded-container">
                     <div class="row">
