@@ -8,7 +8,7 @@
  */
 ?>
 
-<footer>
+<footer class="onRunCloud">
 
     <section class="section">
         <div class="container padded-container">
@@ -83,7 +83,7 @@
                 </div>
                 <div class="col-lg-8 text-center text-lg-right">
                     <p class="mb-0">Designed, Developed and Hosted by <a href="https://sproing.ca/" target="_blank">Sproing
-                            Creative</a></p>
+                            Creative</a>.</p>
                 </div>
             </div>
         </div>
